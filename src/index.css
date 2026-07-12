@@ -1,0 +1,348 @@
+:root {
+  --bg-color: #1a1b26;
+  --panel-bg: rgba(26, 27, 38, 0.85);
+  --panel-border: rgba(56, 178, 172, 0.15);
+  --text-primary: #c0caf5;
+  --text-secondary: #a9b1d6;
+  --text-muted: #565f89;
+  --accent-cyan: #38b2ac;
+  --accent-blue: #7aa2f7;
+  --accent-purple: #bb9af3;
+  --accent-red: #f7768e;
+  --accent-green: #9ece6a;
+  --glow-color: rgba(56, 178, 172, 0.4);
+  --font-outfit: 'Outfit', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-outfit);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(122, 162, 247, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(187, 154, 243, 0.12) 0px, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(26, 27, 38, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(122, 162, 247, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 162, 247, 0.5);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 10px rgba(56, 178, 172, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(56, 178, 172, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(56, 178, 172, 0.2); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Global Utility Classes */
+.glow-text {
+  text-shadow: 0 0 10px rgba(122, 162, 247, 0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glass-panel:hover {
+  border-color: rgba(56, 178, 172, 0.3);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-outfit);
+  background: rgba(122, 162, 247, 0.08);
+  border: 1px solid rgba(122, 162, 247, 0.25);
+  color: var(--accent-blue);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(122, 162, 247, 0.2);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(122, 162, 247, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #1a1b26;
+  border: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #89ddff, #bb9af3);
+  box-shadow: 0 0 15px rgba(137, 221, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+/* Custom Markdown Rendering in App */
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
+
+/* ====================================================
+   Luffy Sprite Character & animations
+   ==================================================== */
+.luffy-sprite-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 12px rgba(122, 162, 247, 0.45));
+  transition: transform 0.2s ease, filter 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+/* Direction flips */
+.luffy-sprite-container.left {
+  transform: scaleX(1);
+}
+.luffy-sprite-container.right {
+  transform: scaleX(-1);
+}
+
+/* Walk animation (sway & 3D tilt) */
+.walking .luffy-sprite-container {
+  animation: spriteWalkSway 0.6s ease-in-out infinite;
+}
+@keyframes spriteWalkSway {
+  0%, 100% { transform: translateY(0) rotate(-4deg) rotateY(-5deg); }
+  50% { transform: translateY(-4px) rotate(4deg) rotateY(5deg); }
+}
+
+/* Running animation (3D bounce) */
+.running .luffy-sprite-container {
+  animation: spriteRunBounce 0.35s ease-in-out infinite;
+}
+@keyframes spriteRunBounce {
+  0%, 100% { transform: translateY(0) scaleY(1.05) rotateX(10deg); }
+  50% { transform: translateY(-10px) scaleY(0.92) rotateX(-10deg); }
+}
+
+/* Sleeping state (breathing glow) */
+.sleeping .luffy-sprite-container {
+  animation: spriteSleep 3.5s ease-in-out infinite;
+  opacity: 0.75;
+}
+@keyframes spriteSleep {
+  0%, 100% { transform: scale(0.95) rotate(-2deg); filter: drop-shadow(0 0 4px rgba(122,162,247,0.2)); }
+  50% { transform: scale(1.02) rotate(2deg); filter: drop-shadow(0 0 15px rgba(122,162,247,0.6)); }
+}
+
+/* Jumping state */
+.jumping .luffy-sprite-container {
+  animation: spriteJump 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@keyframes spriteJump {
+  0% { transform: scaleY(0.8) scaleX(1.1); }
+  40% { transform: scaleY(1.15) scaleX(0.9) translateY(-25px) rotate(15deg); }
+  70% { transform: scaleY(0.95) scaleX(1.05) translateY(-5px); }
+  100% { transform: scaleY(1) scaleX(1) translateY(0); }
+}
+
+/* Speech bubble custom glassmorphism */
+.speech-bubble-glass {
+  background: rgba(30, 30, 46, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(56, 178, 172, 0.3) !important;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(56, 178, 172, 0.25) !important;
+}
+
+/* Glassmorphism Cards & Neumorphism Progress Bars */
+.glass-card-3d {
+  background: rgba(26, 27, 38, 0.45);
+  border: 1px solid rgba(56, 178, 172, 0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card-3d:hover {
+  transform: rotateX(2deg) rotateY(-2deg) translateY(-5px);
+  border-color: rgba(56, 178, 172, 0.35);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(56, 178, 172, 0.2);
+}
+
+/* Neumorphic Inset Track */
+.neumorphic-track {
+  background: rgba(13, 17, 23, 0.75);
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.8),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neumorphic-fill-cyan {
+  background: linear-gradient(90deg, #2b9e97, #38b2ac);
+  box-shadow: 0 0 10px rgba(56, 178, 172, 0.8);
+  border-radius: 9999px;
+  height: 100%;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neumorphic-fill-purple {
+  background: linear-gradient(90deg, #9f7aea, #bb9af3);
+  box-shadow: 0 0 10px rgba(187, 154, 243, 0.8);
+  border-radius: 9999px;
+  height: 100%;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neumorphic-fill-green {
+  background: linear-gradient(90deg, #48bb78, #9ece6a);
+  box-shadow: 0 0 10px rgba(158, 206, 106, 0.8);
+  border-radius: 9999px;
+  height: 100%;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Neumorphic/Glassmorphic Icon Container */
+.glass-icon-container {
+  background: rgba(122, 162, 247, 0.08);
+  border: 1px solid rgba(122, 162, 247, 0.2);
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 
+    inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+    3px 3px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.glass-icon-container:hover {
+  background: rgba(122, 162, 247, 0.15);
+  border-color: rgba(122, 162, 247, 0.4);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 
+    0 0 15px rgba(122, 162, 247, 0.3);
+}
+
+/* Glassmorphic Nav Buttons with Neumorphic shadow */
+.nav-tab-glass {
+  background: rgba(26, 27, 38, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 
+    3px 3px 8px rgba(0, 0, 0, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.02);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-tab-glass:hover {
+  background: rgba(122, 162, 247, 0.1);
+  border-color: rgba(122, 162, 247, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-tab-glass.active {
+  background: rgba(56, 178, 172, 0.12);
+  border-color: rgba(56, 178, 172, 0.3);
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+  color: #38b2ac !important;
+}
+
+/* 3D Float animation for icons */
+.float-3d {
+  animation: floatAnim3D 4s ease-in-out infinite;
+}
+@keyframes floatAnim3D {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(3deg); }
+}
+

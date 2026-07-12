@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile README Previewer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- GitHub Markdown CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css">
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root {
+      --bg-color: #1a1b26;
+      --panel-bg: rgba(26, 27, 38, 0.85);
+      --border-color: #38b2ac;
+      --text-color: #a9b1d6;
+      --heading-color: #c0caf5;
+      --accent-color: #7aa2f7;
+      --glow-color: rgba(56, 178, 172, 0.4);
+      --font-outfit: 'Outfit', sans-serif;
+      --font-fira: 'Fira Code', monospace;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-outfit);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(122, 162, 247, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(187, 154, 243, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: rgba(26, 27, 38, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(56, 178, 172, 0.2);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #7aa2f7, #bb9af3);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #1a1b26;
+      box-shadow: 0 0 10px var(--glow-color);
+    }
+
+    .brand-title {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--heading-color);
+      letter-spacing: -0.5px;
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn {
+      background: rgba(122, 162, 247, 0.1);
+      border: 1px solid rgba(122, 162, 247, 0.3);
+      color: #7aa2f7;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--font-outfit);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background: rgba(122, 162, 247, 0.25);
+      box-shadow: 0 0 10px rgba(122, 162, 247, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-github {
+      background: #7aa2f7;
+      color: #1a1b26;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-github:hover {
+      background: #89ddff;
+      color: #1a1b26;
+      box-shadow: 0 0 12px rgba(137, 221, 255, 0.5);
+    }
+
+    /* Main Layout */
+    .container {
+      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      gap: 2rem;
+      box-sizing: border-box;
+      flex: 1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 320px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--panel-bg);
+      border: 1px solid rgba(56, 178, 172, 0.15);
+      border-radius: 12px;
+      padding: 1.5rem;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      color: var(--heading-color);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Document Links */
+    .doc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .doc-item a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 0.6rem 0.8rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+    }
+
+    .doc-item a:hover {
+      background: rgba(122, 162, 247, 0.1);
+      border-color: rgba(122, 162, 247, 0.3);
+      color: #c0caf5;
+      transform: translateX(4px);
+    }
+
+    .doc-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Status Indicator */
+    .status-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #f7768e; /* Red default */
+      box-shadow: 0 0 8px #f7768e;
+    }
+
+    .status-dot.success {
+      background-color: #9ece6a; /* Green */
+      box-shadow: 0 0 8px #9ece6a;
+    }
+
+    .status-text {
+      color: var(--text-color);
+    }
+
+    /* Content Area */
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      min-width: 0; /* Prevents overflow */
+    }
+
+    .preview-container {
+      background: #0d1117; /* GitHub Dark Default */
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      overflow-x: auto;
+    }
+
+    /* GitHub Markdown Style tweaks */
+    .markdown-body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: transparent !important;
+    }
+
+    /* Theme override for Github Light Preview */
+    body.light-preview .preview-container {
+      background: #ffffff;
+      border-color: #d0d7de;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Table of contents styling */
+    .toc-link {
+      display: block;
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+      border-left: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .toc-link:hover {
+      color: #7aa2f7;
+      border-left-color: #7aa2f7;
+      background: rgba(122, 162, 247, 0.05);
+    }
+
+    .toc-list {
+      max-height: 300px;
+      overflow-y: auto;
+      padding-left: 5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.85rem;
+      color: #565f89;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-logo">PD</div>
+      <div class="brand-title">Pavan Datta | Profile Hub</div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="themeToggle">
+        <span id="themeIcon">🌓</span> <span id="themeBtnText">Toggle GitHub Theme</span>
+      </button>
+      <button class="btn btn-github" onclick="triggerSync()">
+        <span>🚀</span> Sync to GitHub
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar Controls & Docs -->
+    <div class="sidebar">
+      <!-- Banner Status -->
+      <div class="card">
+        <h3><span>🖼️</span> Assets & Banner</h3>
+        <div class="status-box">
+          <div class="status-indicator">
+            <div class="status-dot" id="bannerDot"></div>
+            <div class="status-text" id="bannerStatusText">Checking banner status...</div>
+          </div>
+          <p style="font-size: 0.85rem; margin: 5px 0 0 0; color: #565f89; line-height: 1.4;">
+            The banner must be copied locally using <code>copy_banner.py</code> to display at the top of your profile.
+          </p>
+        </div>
+      </div>
+
+      <!-- PDF Resumes -->
+      <div class="card">
+        <h3><span>📄</span> PDF Resumes</h3>
+        <ul class="doc-list">
+          <li class="doc-item">
+            <a href="Pavan-Datta-Gedila1.pdf" target="_blank">
+              <span class="doc-icon">💼</span>
+              <span>Pavan Datta Gedila 1</span>
+            </a>
+          </li>
+          <li class="doc-item">
+            <a href="pavan Profile.pdf" target="_blank">
+              <span class="doc-icon">👨‍💻</span>
+              <span>Pavan Profile</span>
+            </a>
+          </li>
+          <li class="doc-item">
+            <a href="pavan datta.pdf" target="_blank">
+              <span class="doc-icon">📝</span>
+              <span>Pavan Datta CV</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Jump / TOC -->
+      <div class="card">
+        <h3><span>📍</span> Quick Navigation</h3>
+        <div class="toc-list" id="tocContainer">
+          <p style="font-size: 0.85rem; color: #565f89;">Loading headers...</p>
+        </div>
+      </div>
+
+      <!-- Luffy Widget Preview -->
+      <div class="card">
+        <h3><span>👾</span> Desktop Pet Project</h3>
+        <p style="font-size: 0.85rem; margin: 0 0 10px 0; line-height: 1.4;">
+          Your desktop pet project <strong>Gear 5 Luffy</strong> is built using PySide6. Check out its details in the portfolio!
+        </p>
+        <button class="btn" style="width: 100%; justify-content: center;" onclick="alert('Luffy Desktop Pet widget uses PySide6 collision physics and runs on your system. Run main.py inside its folder to run it!')">
+          🎮 Launch Pet Simulator Info
+        </button>
+      </div>
+    </div>
+
+    <!-- README Content Previewer -->
+    <div class="content-area">
+      <div class="preview-container">
+        <article class="markdown-body" id="readmeContent">
+          <div style="text-align: center; padding: 3rem 0;">
+            <p style="font-size: 1.2rem; color: #565f89;">Loading your GitHub Profile README.md...</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Pavan Datta Gedila. Built for premium profile previewing and quick synchronizations.</p>
+  </footer>
+
+  <script>
+    // GitHub Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const readmeContent = document.getElementById('readmeContent');
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-preview');
+      const isLight = body.classList.contains('light-preview');
+      
+      // Update github-markdown class
+      if (isLight) {
+        readmeContent.classList.remove('markdown-body');
+        // We use GitHub Markdown CSS light theme
+        readmeContent.className = 'markdown-body markdown-light';
+        // Add light theme stylesheet link if not present or toggle container class
+        document.documentElement.setAttribute('data-color-mode', 'light');
+      } else {
+        readmeContent.className = 'markdown-body';
+        document.documentElement.setAttribute('data-color-mode', 'dark');
+      }
+    });
+
+    // Check banner image existence
+    const img = new Image();
+    img.src = 'github_banner.png';
+    img.onload = function() {
+      document.getElementById('bannerDot').className = 'status-dot success';
+      document.getElementById('bannerStatusText').innerText = 'Banner Loaded successfully';
+    };
+    img.onerror = function() {
+      document.getElementById('bannerDot').className = 'status-dot';
+      document.getElementById('bannerStatusText').innerText = 'Banner image missing! Run run.bat';
+    };
+
+    // Load and render README.md
+    fetch('README.md')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('README.md file not found');
+        }
+        return response.text();
+      })
+      .then(markdown => {
+        // Render Markdown using Marked.js
+        readmeContent.innerHTML = marked.parse(markdown);
+        
+        // Generate Table of Contents
+        generateTOC();
+      })
+      .catch(error => {
+        readmeContent.innerHTML = `
+          <div style="color: #f7768e; padding: 2rem; border: 1px dashed #f7768e; border-radius: 8px; text-align: center;">
+            <h3>Error Loading README.md</h3>
+            <p>${error.message}</p>
+          </div>
+        `;
+      });
+
+    // Generate Table of Contents dynamically from rendered headers
+    function generateTOC() {
+      const tocContainer = document.getElementById('tocContainer');
+      tocContainer.innerHTML = '';
+      
+      const headers = readmeContent.querySelectorAll('h2, h3');
+      if (headers.length === 0) {
+        tocContainer.innerHTML = '<p style="font-size: 0.85rem; color: #565f89;">No headers found.</p>';
+        return;
+      }
+
+      headers.forEach((header, index) => {
+        const id = 'header-' + index;
+        header.id = id;
+        
+        const link = document.createElement('a');
+        link.className = 'toc-link';
+        link.href = '#' + id;
+        link.innerText = header.innerText.replace(/^[⚡🔮💼🏆⚙️🤖👾📄🌐💻🎨🌱📈🤝]/, '').trim();
+        
+        // Indent h3 headers
+        if (header.tagName === 'H3') {
+          link.style.paddingLeft = '20px';
+          link.style.fontSize = '0.85rem';
+        }
+        
+        tocContainer.appendChild(link);
+      });
+    }
+
+    function triggerSync() {
+      alert('To sync your profile to GitHub, double-click the push_to_github.bat script in your workspace folder.');
+    }
+  </script>
+</body>
+</html>
