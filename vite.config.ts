@@ -35,6 +35,21 @@ const assetCopier = () => {
         }
       });
 
+      // Inline luffy_walk.png as base64 in luffy_widget.svg
+      const luffyWalkPath = path.resolve(process.cwd(), 'luffy_walk.png');
+      const widgetPath = path.resolve(process.cwd(), 'luffy_widget.svg');
+      if (fs.existsSync(luffyWalkPath) && fs.existsSync(widgetPath)) {
+        try {
+          const base64 = fs.readFileSync(luffyWalkPath).toString('base64');
+          let svgContent = fs.readFileSync(widgetPath, 'utf8');
+          svgContent = svgContent.replace(/<image\s+href="[^"]*"/, `<image href="data:image/png;base64,${base64}"`);
+          fs.writeFileSync(widgetPath, svgContent);
+          console.log('[Asset Copier] Inlined base64 into luffy_widget.svg');
+        } catch (e) {
+          console.error('[Asset Copier] Failed to inline base64:', e);
+        }
+      }
+
       // Also sync root documents to public
       const docs = ['README.md', 'Pavan-Datta-Gedila1.pdf', 'pavan Profile.pdf', 'pavan datta.pdf', 'luffy_widget.svg'];
       docs.forEach(doc => {
