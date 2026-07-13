@@ -1,4 +1,4 @@
-# <p align="center"><img src="./github_banner.png" alt="Pavan Datta Gedila Header" width="100%" /></p>
+# <p align="center"><img src="./github_banner.svg" alt="Pavan Datta Gedila Header" width="100%" /></p>
 
 <h1 align="center">⚡ Pavan Datta Gedila</h1>
 <p align="center">
@@ -7,6 +7,12 @@
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=7AA2F7&center=true&vCenter=true&width=600&lines=Cloud+Computing+Intern;Full-Stack+Developer;DevOps+%26+Backend+Enthusiast;AI+%26+Automation+Engineer" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <a href="https://pavangitu.github.io/" target="_blank">
+    <img src="https://img.shields.io/badge/🔮_View_My_Interactive_Profile_&_Live_Desktop_Pet-Click_Here-FF007F?style=for-the-badge&logo=react&logoColor=white" alt="Live Interactive Profile" />
+  </a>
 </p>
 
 <p align="center">
@@ -289,14 +295,34 @@
 
 ## 🤝 Let's Connect
 
-<p align="center">
-  <a href="mailto:pavandattagedila@gmail.com"><img src="https://img.shields.io/badge/Email-pavandattagedila@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge" /></a>
-  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Pavan%20Datta%20Gedila-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" /></a>
-  <a href="https://www.instagram.com/she__call_me_single?igsh=mwl4mddpbwnqmxzlyg==" target="_blank"><img src="https://img.shields.io/badge/Instagram-she__call__me__single-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge" /></a>
-  <a href="https://www.topcoder.com/members/761211" target="_blank"><img src="https://img.shields.io/badge/Topcoder-761211-2F9FD5?style=for-the-badge&logo=topcoder&logoColor=white" alt="Topcoder Badge" /></a>
-  <a href="https://twitter.com/" target="_blank"><img src="https://img.shields.io/badge/Twitter-Profile-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge" /></a>
-  <a href="https://github.com/Pavangitu" target="_blank"><img src="https://img.shields.io/badge/GitHub-pavangitu-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge" /></a>
-</p>
+<div align="center">
+  <table border="0" cellpadding="8" cellspacing="0" style="border-collapse: collapse; max-width: 600px; width: 100%;">
+    <tr style="border-bottom: 1px solid #30363d;">
+      <td align="left"><strong>📬 Email</strong></td>
+      <td align="left"><a href="mailto:pavandattagedila@gmail.com">pavandattagedila@gmail.com</a></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #30363d;">
+      <td align="left"><strong>💼 LinkedIn</strong></td>
+      <td align="left"><a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369" target="_blank">Pavan Datta Gedila</a></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #30363d;">
+      <td align="left"><strong>💻 GitHub</strong></td>
+      <td align="left"><a href="https://github.com/Pavangitu" target="_blank">pavangitu</a></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #30363d;">
+      <td align="left"><strong>📸 Instagram</strong></td>
+      <td align="left"><a href="https://www.instagram.com/she__call_me_single?igsh=mwl4mddpbwnqmxzlyg==" target="_blank">she__call_me_single</a></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #30363d;">
+      <td align="left"><strong>🏆 Topcoder</strong></td>
+      <td align="left"><a href="https://www.topcoder.com/members/761211" target="_blank">761211</a></td>
+    </tr>
+    <tr>
+      <td align="left"><strong>🐦 Twitter / X</strong></td>
+      <td align="left"><a href="https://twitter.com/" target="_blank">Profile</a></td>
+    </tr>
+  </table>
+</div>
 
 <p align="center">
   <em>"Simplicity is the soul of efficiency; automation is the execution of it."</em>

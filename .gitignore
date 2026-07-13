@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+.pnpm-store
+/temp_run
+
+# Production build output
+dist
+dist-ssr
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and Editors
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+Thumbs.db
+EHthumbs.db
+Desktop.ini

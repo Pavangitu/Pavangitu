@@ -17,40 +17,31 @@ export default function App() {
   const [githubTheme, setGithubTheme] = useState<'dark' | 'light'>('dark');
   const [readmeHtml, setReadmeHtml] = useState<string>('');
   const [bannerStatus, setBannerStatus] = useState<'loaded' | 'missing' | 'loading'>('loading');
-  const [petEnabled, setPetEnabled] = useState<boolean>(true);
-  
-  // Typing Effect
-  const [typedText, setTypedText] = useState('');
-  const phrases = [
-    'Cloud & Full-Stack Developer',
-    'DevOps & Infrastructure Engineer',
-    'AI & Automation Enthusiast'
-  ];
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [petEnabled] = useState<boolean>(true);
+  const [isShaking, setIsShaking] = useState<boolean>(false);
 
-  // Luffy Pet State
-  const [petPos, setPetPos] = useState({ x: window.innerWidth - 180, y: window.innerHeight - 180 });
-  const [petState, setPetState] = useState<'idle' | 'walking' | 'running' | 'jumping' | 'sleeping'>('idle');
-  const [petDirection, setPetDirection] = useState<'left' | 'right'>('left');
-  const [petSpeech, setPetSpeech] = useState<string>('Gear 5 Luffy Pet is ready!');
-  const petRef = useRef<HTMLDivElement>(null);
-  const dragStart = useRef({ x: 0, y: 0 });
-  const isDragging = useRef(false);
-  const [isGrabbed, setIsGrabbed] = useState(false);
-
-  // Fetch README
+  // Listen for Luffy shake disturbances
   useEffect(() => {
-    fetch('/README.md')
+    const handleShake = () => {
+      setIsShaking(true);
+      setTimeout(() => setIsShaking(false), 500);
+    };
+    window.addEventListener('luffy-shake', handleShake);
+    return () => window.removeEventListener('luffy-shake', handleShake);
+  }, []);
+  
+  // Fetch README once on mount
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL || '/';
+    fetch(base + 'README.md')
       .then(res => {
         if (!res.ok) throw new Error('README not found');
         return res.text();
       })
       .then(text => {
         // Fix local banner path to point to public root
-        const cleanedText = text.replace('./github_banner.png', '/github_banner.png')
-                                .replace('github_banner.png', '/github_banner.png');
+        const cleanedText = text.replace('./github_banner.png', base + 'github_banner.png')
+                                .replace('github_banner.png', base + 'github_banner.png');
         setReadmeHtml(marked.parse(cleanedText) as string);
       })
       .catch(() => {
@@ -59,136 +50,10 @@ export default function App() {
 
     // Check banner
     const img = new Image();
-    img.src = '/github_banner.png';
+    img.src = base + 'github_banner.png';
     img.onload = () => setBannerStatus('loaded');
     img.onerror = () => setBannerStatus('missing');
   }, []);
-
-  // Typing Effect Loop
-  useEffect(() => {
-    const currentPhrase = phrases[phraseIndex];
-    let timer: NodeJS.Timeout;
-
-    if (isDeleting) {
-      timer = setTimeout(() => {
-        setTypedText(currentPhrase.substring(0, charIndex - 1));
-        setCharIndex(prev => prev - 1);
-      }, 50);
-    } else {
-      timer = setTimeout(() => {
-        setTypedText(currentPhrase.substring(0, charIndex + 1));
-        setCharIndex(prev => prev + 1);
-      }, 100);
-    }
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      timer = setTimeout(() => setIsDeleting(true), 2000); // Wait before delete
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setPhraseIndex(prev => (prev + 1) % phrases.length);
-    }
-
-    return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, phraseIndex]);
-
-  // Luffy Pet Physics & Roaming
-  useEffect(() => {
-    if (!petEnabled) return;
-
-    const interval = setInterval(() => {
-      if (isDragging.current) return;
-
-      // Random state changes
-      if (Math.random() < 0.15) {
-        const states: Array<'idle' | 'walking' | 'running' | 'jumping' | 'sleeping'> = ['idle', 'walking', 'running', 'jumping', 'sleeping'];
-        const newState = states[Math.floor(Math.random() * states.length)];
-        setPetState(newState);
-
-        // Speeches based on state
-        if (newState === 'sleeping') {
-          setPetSpeech('ZZZ... Nika... ZZZ...');
-        } else if (newState === 'jumping') {
-          setPetSpeech('Gomu Gomu no... Rocket!');
-        } else if (newState === 'running') {
-          setPetSpeech('Hahaha! The drums of liberation!');
-        } else {
-          setPetSpeech('Gear 5 Luffy active!');
-        }
-      }
-
-      // Movement logic
-      setPetPos(prev => {
-        let { x, y } = prev;
-        const speed = petState === 'running' ? 8 : petState === 'walking' ? 3 : 0;
-        
-        if (petState === 'jumping') {
-          y -= 15; // Jumps up
-          setTimeout(() => {
-            setPetPos(p => ({ ...p, y: Math.min(window.innerHeight - 150, p.y + 15) }));
-          }, 300);
-        }
-
-        if (speed > 0) {
-          if (petDirection === 'left') {
-            x -= speed;
-            if (x < 20) {
-              x = 20;
-              setPetDirection('right');
-              setPetSpeech('Oops! Bounce!');
-            }
-          } else {
-            x += speed;
-            if (x > window.innerWidth - 180) {
-              x = window.innerWidth - 180;
-              setPetDirection('left');
-              setPetSpeech('Turning back!');
-            }
-          }
-        }
-
-        // Keep inside bounds vertically
-        y = Math.max(20, Math.min(window.innerHeight - 150, y));
-
-        return { x, y };
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [petState, petDirection, petEnabled]);
-
-  // Handle Dragging
-  const handleMouseDown = (e: React.MouseEvent) => {
-    isDragging.current = true;
-    setIsGrabbed(true);
-    dragStart.current = {
-      x: e.clientX - petPos.x,
-      y: e.clientY - petPos.y
-    };
-    setPetState('jumping');
-    setPetSpeech('You grabbed me! Shishishi!');
-  };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isDragging.current) return;
-      const x = Math.max(0, Math.min(window.innerWidth - 120, e.clientX - dragStart.current.x));
-      const y = Math.max(0, Math.min(window.innerHeight - 120, e.clientY - dragStart.current.y));
-      setPetPos({ x, y });
-    };
-
-    const handleMouseUp = () => {
-      isDragging.current = false;
-      setIsGrabbed(false);
-      setPetState('idle');
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [petPos]);
 
   // Projects Data
   const projects: Project[] = [
@@ -247,11 +112,11 @@ export default function App() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={`flex flex-col min-h-screen ${isShaking ? 'shake-effect' : ''}`}>
       {/* Top Banner and Navigation */}
-      <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-slate-900/80 backdrop-blur-md border-b border-cyan-500/20">
+      <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-slate-950/80 backdrop-blur-md border-b border-indigo-500/20">
         <div className="flex items-center gap-3">
-          <div className="flex items-center justify-center w-9 h-9 font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 text-slate-900 rounded-lg shadow-[0_0_15px_rgba(56,178,172,0.4)]">
+          <div className="flex items-center justify-center w-9 h-9 font-bold bg-gradient-to-r from-indigo-400 to-rose-400 text-slate-950 rounded-lg shadow-[0_0_15px_rgba(99,102,241,0.4)]">
             PD
           </div>
           <div>
@@ -298,12 +163,6 @@ export default function App() {
               Toggle GitHub Theme ({githubTheme})
             </button>
           )}
-          <button 
-            onClick={() => setPetEnabled(!petEnabled)} 
-            className={`px-2.5 py-1 text-xs rounded-md border transition-all ${petEnabled ? 'bg-green-500/10 border-green-500/30 text-green-400' : 'bg-red-500/10 border-red-500/30 text-red-400'}`}
-          >
-            Luffy Pet: {petEnabled ? 'ON' : 'OFF'}
-          </button>
         </div>
       </header>
 
@@ -312,11 +171,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1 space-y-4 text-center md:text-left">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              Hey, I'm <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pavan Datta Gedila</span>
+              Hey, I'm <span className="bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">Pavan Datta Gedila</span>
             </h2>
-            <div className="h-8 font-mono text-cyan-400 text-lg md:text-xl font-medium">
-              {typedText}<span className="animate-pulse">|</span>
-            </div>
+            <TypingEffect />
             <p className="text-slate-400 max-w-xl text-sm md:text-base leading-relaxed">
               Centurion University computer science student specializing in building high-performance cloud architectures, orchestrating DevOps pipelines, and deploying robust server-side widgets.
             </p>
@@ -677,42 +534,434 @@ export default function App() {
       </footer>
 
       {/* Luffy Interactive Widget Overlay */}
-      {petEnabled && (
+      <LuffyPet petEnabled={petEnabled} />
+    </div>
+  );
+}
+
+// ============================================================================
+// SELF-CONTAINED SUBCOMPONENTS TO PREVENT GLOBAL APP RE-RENDERS & SHAKING
+// ============================================================================
+
+const phrases = [
+  'Cloud & Full-Stack Developer',
+  'DevOps & Infrastructure Engineer',
+  'AI & Automation Enthusiast'
+];
+
+function TypingEffect() {
+  const [typedText, setTypedText] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      // Pause at the end of the phrase
+      const timer = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timer);
+    }
+    
+    if (isDeleting && charIndex === 0) {
+      // Transition to next phrase
+      setIsDeleting(false);
+      setPhraseIndex(prev => (prev + 1) % phrases.length);
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setTypedText(currentPhrase.substring(0, isDeleting ? charIndex - 1 : charIndex + 1));
+      setCharIndex(prev => isDeleting ? prev - 1 : prev + 1);
+    }, isDeleting ? 50 : 100);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, phraseIndex]);
+
+  return (
+    <div className="h-8 font-mono text-rose-400 text-lg md:text-xl font-medium">
+      {typedText}<span className="animate-pulse">|</span>
+    </div>
+  );
+}
+
+function processLuffyImage(src: string, cropTop: boolean): Promise<string> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          resolve(src);
+          return;
+        }
+
+        // Crop top if it contains text
+        const cropTopPercent = cropTop ? 0.15 : 0.0;
+        const cropTopPixels = Math.floor(img.height * cropTopPercent);
+        const newHeight = img.height - cropTopPixels;
+
+        canvas.width = img.width;
+        canvas.height = newHeight;
+
+        // Draw cropped image
+        ctx.drawImage(img, 0, cropTopPixels, img.width, newHeight, 0, 0, img.width, newHeight);
+
+        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imgData.data;
+        const width = canvas.width;
+        const height = canvas.height;
+
+        // Helper to check if a pixel is white/light-gray background
+        const isWhite = (x: number, y: number) => {
+          const idx = (y * width + x) * 4;
+          return data[idx] > 240 && data[idx + 1] > 240 && data[idx + 2] > 240 && data[idx + 3] > 0;
+        };
+
+        // Flood fill queue
+        const queue: [number, number][] = [];
+        const visited = new Uint8Array(width * height);
+
+        // Add all boundary pixels as seeds to start the flood fill
+        for (let x = 0; x < width; x++) {
+          if (isWhite(x, 0)) { queue.push([x, 0]); visited[x] = 1; }
+          if (isWhite(x, height - 1)) { queue.push([x, height - 1]); visited[(height - 1) * width + x] = 1; }
+        }
+        for (let y = 0; y < height; y++) {
+          if (isWhite(0, y)) { queue.push([0, y]); visited[y * width] = 1; }
+          if (isWhite(width - 1, y)) { queue.push([width - 1, y]); visited[y * width + (width - 1)] = 1; }
+        }
+
+        // Breadth-First Search (BFS) Flood Fill
+        let head = 0;
+        while (head < queue.length) {
+          const [cx, cy] = queue[head++];
+          
+          // Mark pixel as transparent
+          const idx = (cy * width + cx) * 4;
+          data[idx + 3] = 0; // Alpha = 0
+
+          // Check 4 neighbors
+          const neighbors = [
+            [cx + 1, cy],
+            [cx - 1, cy],
+            [cx, cy + 1],
+            [cx, cy - 1]
+          ];
+
+          for (const [nx, ny] of neighbors) {
+            if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
+              const nIdx = ny * width + nx;
+              if (!visited[nIdx] && isWhite(nx, ny)) {
+                visited[nIdx] = 1;
+                queue.push([nx, ny]);
+              }
+            }
+          }
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+        resolve(canvas.toDataURL());
+      } catch (err) {
+        console.error("Error processing image background:", err);
+        resolve(src);
+      }
+    };
+    img.onerror = () => {
+      resolve(src);
+    };
+  });
+}
+
+// Custom disturbance events for Luffy
+const disturbEvents = [
+  {
+    type: 'shake',
+    phrases: [
+      'Gomu Gomu no... ELEPHANT GUN! 👊 *BOOM*',
+      'BOING! Bouncing earthquake! Hahaha! 🌍',
+      'Drums of Liberation! Dance with me! 🥁',
+      'Gomu Gomu no... GATLING GUN! 🥊💥'
+    ],
+    action: () => {
+      window.dispatchEvent(new CustomEvent('luffy-shake'));
+    }
+  },
+  {
+    type: 'meat',
+    phrases: [
+      '🍖 I demand MEAT! Feed me or I will block your view!',
+      'Gomu Gomu no... hungry! Where is Sanji? 👨‍🍳',
+      'I want food! 🍖🍖🍖',
+      'Coding is cool, but meat is better! 🍖'
+    ],
+    action: (setPos: any) => {
+      // Jump to center of screen
+      setPos({ x: window.innerWidth / 2 - 40, y: window.innerHeight / 2 - 80 });
+    }
+  },
+  {
+    type: 'idea',
+    phrases: [
+      '💡 Let\'s rename all your functions to Zoro, Sanji, and Nami!',
+      '💡 Delete the node_modules folder. It looks heavy! 😜',
+      '💡 Let\'s code a system that automatically orders pizza!',
+      '💡 Replace all console errors with: "Shishishi! Fixed!"',
+      '💡 Write code in pirate slang! "Ahoy, const ship = true!"'
+    ],
+    action: () => {}
+  },
+  {
+    type: 'zoro',
+    phrases: [
+      '⚔️ Zoro got lost again! Check your DevTools console!',
+      'Wait, is Zoro lost in your codebase? 🧭',
+      'I think Zoro is wandering around the Console Tab...'
+    ],
+    action: () => {
+      console.log("%c⚔️ Zoro: 'Where the hell am I? Is this the console? I was looking for the sword shop...'", "color: #10b981; font-weight: bold; font-size: 14px;");
+    }
+  }
+];
+
+function LuffyPet({ petEnabled }: LuffyPetProps) {
+  const [petPos, setPetPos] = useState({ x: window.innerWidth - 180, y: window.innerHeight - 180 });
+  const [petState, setPetState] = useState<'idle' | 'walking' | 'running' | 'jumping' | 'sleeping'>('idle');
+  const [petDirection, setPetDirection] = useState<'left' | 'right'>('left');
+  const [petSpeech, setPetSpeech] = useState<string>('Gear 5 Luffy Pet is ready! 🏴‍☠️');
+  const [showBubble, setShowBubble] = useState(true);
+  const petRef = useRef<HTMLDivElement>(null);
+  const dragStart = useRef({ x: 0, y: 0 });
+  const isDragging = useRef(false);
+  const [isGrabbed, setIsGrabbed] = useState(false);
+
+  // States for transparent processed image sources
+  const [walkSrc, setWalkSrc] = useState<string>('/luffy_walk.png');
+  const [waveSrc, setWaveSrc] = useState<string>('/luffy_wave.png');
+  const [laughSrc, setLaughSrc] = useState<string>('/luffy_laugh.png');
+
+  // Process images on mount to remove white background and crop text
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL || '/';
+    processLuffyImage(base + 'luffy_walk.png', true).then(url => setWalkSrc(url));
+    processLuffyImage(base + 'luffy_wave.png', true).then(url => setWaveSrc(url));
+    processLuffyImage(base + 'luffy_laugh.png', false).then(url => setLaughSrc(url));
+  }, []);
+
+  // Helper to trigger speech and show bubble
+  const speak = (msg: string) => {
+    setPetSpeech(msg);
+    setShowBubble(true);
+  };
+
+  // Hide bubble after 3.5 seconds
+  useEffect(() => {
+    if (!showBubble) return;
+    const timer = setTimeout(() => {
+      setShowBubble(false);
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, [petSpeech, showBubble]);
+
+  // Luffy Pet Behavior (State Transitions & Random Disturbances)
+  useEffect(() => {
+    if (!petEnabled || isGrabbed) return;
+
+    const behaviorInterval = setInterval(() => {
+      if (isDragging.current) return;
+
+      // 25% chance of a funny disturbance or giving an idea
+      const isDisturbed = Math.random() < 0.25;
+      if (isDisturbed) {
+        const event = disturbEvents[Math.floor(Math.random() * disturbEvents.length)];
+        const phrase = event.phrases[Math.floor(Math.random() * event.phrases.length)];
+        setPetState('jumping');
+        speak(phrase);
+        
+        if (event.type === 'meat') {
+          // Luffy jumps to center and demands meat
+          event.action(setPetPos);
+          // Return to bottom after 4.5 seconds
+          setTimeout(() => {
+            setPetPos({ x: window.innerWidth - 180, y: window.innerHeight - 180 });
+            setPetState('idle');
+            speak('Okay, back to work! But I still want meat... 🍖');
+          }, 4500);
+        } else {
+          event.action();
+        }
+        return;
+      }
+
+      // Normal state transitions
+      const states: Array<'idle' | 'walking' | 'running' | 'jumping' | 'sleeping'> = ['idle', 'walking', 'running', 'jumping', 'sleeping'];
+      const weights = [0.35, 0.35, 0.15, 0.05, 0.1];
+      let rand = Math.random();
+      let chosenIndex = 0;
+      for (let i = 0; i < weights.length; i++) {
+        rand -= weights[i];
+        if (rand <= 0) {
+          chosenIndex = i;
+          break;
+        }
+      }
+      const newState = states[chosenIndex];
+      setPetState(newState);
+
+      if (newState === 'sleeping') {
+        speak('ZZZ... Nika... ZZZ... 💤');
+      } else if (newState === 'jumping') {
+        speak('Gomu Gomu no... Rocket! 🚀');
+      } else if (newState === 'running') {
+        speak('Hahaha! The drums of liberation! 🥁');
+      } else if (newState === 'walking') {
+        speak('Exploring your desktop... Shishishi! 🧭');
+      } else {
+        speak('Gear 5 Luffy is ready! 🏴‍☠️');
+      }
+    }, 4500);
+
+    return () => clearInterval(behaviorInterval);
+  }, [petEnabled, isGrabbed]);
+
+  // Luffy Pet Physics & Roaming (Smooth movement loop)
+  useEffect(() => {
+    if (!petEnabled) return;
+
+    const movementInterval = setInterval(() => {
+      if (isDragging.current || isGrabbed) return;
+
+      setPetPos(prev => {
+        let { x, y } = prev;
+        const speed = petState === 'running' ? 7 : petState === 'walking' ? 2.5 : 0;
+        
+        if (petState === 'jumping') {
+          y -= 8;
+          const fallTimeout = setTimeout(() => {
+            setPetPos(p => ({ ...p, y: Math.min(window.innerHeight - 150, p.y + 8) }));
+          }, 300);
+          return { x, y: Math.max(20, y) };
+        }
+
+        if (speed > 0) {
+          if (petDirection === 'left') {
+            x -= speed;
+            if (x < 20) {
+              x = 20;
+              setPetDirection('right');
+              speak('Oops! Bounce! 💫');
+            }
+          } else {
+            x += speed;
+            if (x > window.innerWidth - 180) {
+              x = window.innerWidth - 180;
+              setPetDirection('left');
+              speak('Turning back! 🔄');
+            }
+          }
+        }
+
+        y = Math.max(20, Math.min(window.innerHeight - 150, y));
+        return { x, y };
+      });
+    }, 100);
+
+    return () => clearInterval(movementInterval);
+  }, [petState, petDirection, petEnabled, isGrabbed]);
+
+  // Handle Dragging
+  const handleMouseDown = (e: React.MouseEvent) => {
+    isDragging.current = true;
+    setIsGrabbed(true);
+    dragStart.current = {
+      x: e.clientX - petPos.x,
+      y: e.clientY - petPos.y
+    };
+    setPetState('jumping');
+    speak('You grabbed me! Shishishi! 🤪');
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging.current) return;
+      const x = Math.max(0, Math.min(window.innerWidth - 120, e.clientX - dragStart.current.x));
+      const y = Math.max(0, Math.min(window.innerHeight - 120, e.clientY - dragStart.current.y));
+      setPetPos({ x, y });
+    };
+
+    const handleMouseUp = () => {
+      isDragging.current = false;
+      setIsGrabbed(false);
+      setPetState('idle');
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [petPos]);
+
+  // Play tag on mouse hover (15% chance to run away when user hovers mouse)
+  const handleMouseEnter = () => {
+    if (isDragging.current || isGrabbed) return;
+    if (Math.random() < 0.15) {
+      setPetState('running');
+      speak('Tag! You can\'t catch me! 🏃‍♂️💨');
+      setPetPos({
+        x: Math.max(50, Math.min(window.innerWidth - 200, Math.random() * window.innerWidth)),
+        y: Math.max(50, Math.min(window.innerHeight - 200, Math.random() * window.innerHeight))
+      });
+    }
+  };
+
+  if (!petEnabled) return null;
+
+  return (
+    <div 
+      ref={petRef}
+      onMouseDown={handleMouseDown}
+      onMouseEnter={handleMouseEnter}
+      style={{ 
+        position: 'fixed',
+        left: `${petPos.x}px`,
+        top: `${petPos.y}px`,
+        zIndex: 9999,
+        cursor: isDragging.current ? 'grabbing' : 'grab',
+        transition: isDragging.current ? 'none' : 'left 0.1s linear, top 0.1s linear'
+      }}
+      className="select-none"
+    >
+      {/* Dynamic Speech Bubble */}
+      {showBubble && (
         <div 
-          ref={petRef}
-          onMouseDown={handleMouseDown}
-          style={{ 
-            position: 'fixed',
-            left: `${petPos.x}px`,
-            top: `${petPos.y}px`,
-            zIndex: 9999,
-            cursor: isDragging.current ? 'grabbing' : 'grab',
-            transition: isDragging.current ? 'none' : 'left 0.1s linear, top 0.1s linear'
+          className="speech-bubble-glass absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 rounded-lg text-xs font-semibold text-white text-center whitespace-normal pointer-events-none select-none w-[180px] z-[10000]"
+          style={{
+            animation: 'slideIn 0.2s ease-out'
           }}
-          className="flex flex-col items-center select-none"
         >
-          {/* Speech bubble */}
-          <div className="text-[11px] text-cyan-300 px-3 py-1.5 rounded-xl mb-2.5 max-w-[160px] text-center font-mono animate-bounce speech-bubble-glass">
-            {petSpeech}
-          </div>
-
-          {/* Luffy Character graphic (3D container) */}
-          <div className={`luffy-sprite-container ${petState} ${petDirection}`}>
-            {isGrabbed || petState === 'jumping' ? (
-              <img src="/luffy_laugh.png" alt="Gear 5 Luffy Laughing" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
-            ) : petState === 'walking' || petState === 'running' || petState === 'sleeping' ? (
-              <img src="/luffy_walk.png" alt="Gear 5 Luffy Walking" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
-            ) : (
-              <img src="/luffy_wave.png" alt="Gear 5 Luffy Waving" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
-            )}
-          </div>
-
-          {/* Label */}
-          <span className="text-[9px] font-mono text-slate-400 mt-2 bg-slate-950/90 px-2 py-0.5 rounded-full border border-slate-800 shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
-            Luffy ({petState})
-          </span>
+          {petSpeech}
+          {/* Triangular Tail */}
+          <div 
+            className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent" 
+            style={{ borderTopColor: 'rgba(18, 12, 28, 0.8)' }}
+          ></div>
         </div>
       )}
+
+      <div className={`luffy-sprite-container ${petState} ${petDirection}`}>
+        {isGrabbed || petState === 'jumping' ? (
+          <img src={laughSrc} alt="Gear 5 Luffy Laughing" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
+        ) : petState === 'walking' || petState === 'running' || petState === 'sleeping' ? (
+          <img src={walkSrc} alt="Gear 5 Luffy Walking" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
+        ) : (
+          <img src={waveSrc} alt="Gear 5 Luffy Waving" className="w-[80px] h-[80px] object-contain pointer-events-none select-none" />
+        )}
+      </div>
     </div>
   );
 }

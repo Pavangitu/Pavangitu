@@ -22,14 +22,14 @@ if not exist .git (
 )
 
 :: Add files
-echo Staging profile README, banner and tools...
-git add README.md github_banner.png copy_banner.py run.bat preview.html push_to_github.bat
+echo Staging all project source files...
+git add .
 
 :: Check if remote exists
 git remote get-url origin >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo Remote 'origin' is not set. Adding remote for Pavangitu...
-    git remote add origin https://github.com/Pavangitu/Pavangitu.git
+    git remote add origin https://github.com/Pavangitu/g.pavn-datta.git
 )
 
 echo.

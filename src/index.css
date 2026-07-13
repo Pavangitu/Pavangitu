@@ -1,16 +1,16 @@
 :root {
-  --bg-color: #1a1b26;
-  --panel-bg: rgba(26, 27, 38, 0.85);
-  --panel-border: rgba(56, 178, 172, 0.15);
-  --text-primary: #c0caf5;
-  --text-secondary: #a9b1d6;
-  --text-muted: #565f89;
-  --accent-cyan: #38b2ac;
-  --accent-blue: #7aa2f7;
-  --accent-purple: #bb9af3;
-  --accent-red: #f7768e;
-  --accent-green: #9ece6a;
-  --glow-color: rgba(56, 178, 172, 0.4);
+  --bg-color: #03000a;
+  --panel-bg: rgba(10, 8, 20, 0.75);
+  --panel-border: rgba(99, 102, 241, 0.15);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --accent-cyan: #f43f5e;
+  --accent-blue: #6366f1;
+  --accent-purple: #a855f7;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --glow-color: rgba(99, 102, 241, 0.3);
   --font-outfit: 'Outfit', sans-serif;
   --font-fira: 'Fira Code', monospace;
   --transition-fast: 0.2s ease;
@@ -28,8 +28,8 @@ body {
   color: var(--text-primary);
   font-family: var(--font-outfit);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(122, 162, 247, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(187, 154, 243, 0.12) 0px, transparent 50%);
+    radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.18) 0px, transparent 55%),
+    radial-gradient(at 90% 80%, rgba(244, 63, 94, 0.18) 0px, transparent 55%);
   background-attachment: fixed;
   min-height: 100vh;
   line-height: 1.5;
@@ -45,11 +45,11 @@ body {
   background: rgba(26, 27, 38, 0.3);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(122, 162, 247, 0.3);
+  background: rgba(99, 102, 241, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(122, 162, 247, 0.5);
+  background: rgba(244, 63, 94, 0.5);
 }
 
 /* Animations */
@@ -78,6 +78,7 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -164,7 +165,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 0 12px rgba(122, 162, 247, 0.45));
   transition: transform 0.2s ease, filter 0.2s ease;
   transform-style: preserve-3d;
 }
@@ -218,19 +218,19 @@ body {
 
 /* Speech bubble custom glassmorphism */
 .speech-bubble-glass {
-  background: rgba(30, 30, 46, 0.75) !important;
+  background: rgba(18, 12, 28, 0.8) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
-  border: 1px solid rgba(56, 178, 172, 0.3) !important;
+  border: 1px solid rgba(244, 63, 94, 0.3) !important;
   box-shadow: 
     0 10px 25px rgba(0, 0, 0, 0.4),
-    0 0 10px rgba(56, 178, 172, 0.25) !important;
+    0 0 10px rgba(99, 102, 241, 0.25) !important;
 }
 
 /* Glassmorphism Cards & Neumorphism Progress Bars */
 .glass-card-3d {
-  background: rgba(26, 27, 38, 0.45);
-  border: 1px solid rgba(56, 178, 172, 0.12);
+  background: rgba(13, 10, 25, 0.45);
+  border: 1px solid rgba(99, 102, 241, 0.12);
   border-radius: 16px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -242,10 +242,10 @@ body {
 
 .glass-card-3d:hover {
   transform: rotateX(2deg) rotateY(-2deg) translateY(-5px);
-  border-color: rgba(56, 178, 172, 0.35);
+  border-color: rgba(244, 63, 94, 0.35);
   box-shadow: 
     0 15px 35px rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(56, 178, 172, 0.2);
+    0 0 15px rgba(99, 102, 241, 0.2);
 }
 
 /* Neumorphic Inset Track */
@@ -329,12 +329,12 @@ body {
 }
 
 .nav-tab-glass.active {
-  background: rgba(56, 178, 172, 0.12);
-  border-color: rgba(56, 178, 172, 0.3);
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(244, 63, 94, 0.3);
   box-shadow: 
     inset 2px 2px 5px rgba(0, 0, 0, 0.5),
     inset -1px -1px 2px rgba(255, 255, 255, 0.05);
-  color: #38b2ac !important;
+  color: #f43f5e !important;
 }
 
 /* 3D Float animation for icons */
@@ -344,5 +344,26 @@ body {
 @keyframes floatAnim3D {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-6px) rotate(3deg); }
+}
+
+/* Screen shake animation */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-3px, -2px) rotate(-0.5deg); }
+  20% { transform: translate(3px, 0px) rotate(0.5deg); }
+  30% { transform: translate(0px, 3px) rotate(0deg); }
+  40% { transform: translate(2px, -1px) rotate(0.5deg); }
+  50% { transform: translate(-1px, 3px) rotate(-0.5deg); }
+  60% { transform: translate(-3px, 2px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-0.5deg); }
+  80% { transform: translate(-2px, -1px) rotate(0.5deg); }
+  90% { transform: translate(2px, 3px) rotate(0deg); }
+}
+
+.shake-effect {
+  animation: screenShake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
