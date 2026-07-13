@@ -10,9 +10,14 @@
 </p>
 
 <p align="center">
-  <a href="https://pavangitu.github.io/g.pavn-datta/" target="_blank">
+  <a href="https://pavangitu.github.io/Pavangitu/" target="_blank">
     <img src="https://img.shields.io/badge/🔮_View_My_Interactive_Profile_&_Live_Desktop_Pet-Click_Here-FF007F?style=for-the-badge&logo=react&logoColor=white" alt="Live Interactive Profile" />
   </a>
+</p>
+
+<!-- Animated Profile Desktop Pet Widget -->
+<p align="center">
+  <img src="./luffy_widget.svg" alt="Gear 5 Luffy Desktop Pet Widget" width="100%" />
 </p>
 
 <p align="center">

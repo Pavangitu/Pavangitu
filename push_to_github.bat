@@ -29,7 +29,10 @@ git add .
 git remote get-url origin >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo Remote 'origin' is not set. Adding remote for Pavangitu...
-    git remote add origin https://github.com/Pavangitu/g.pavn-datta.git
+    git remote add origin https://github.com/Pavangitu/Pavangitu.git
+) else (
+    echo Updating remote URL to point to Pavangitu repository...
+    git remote set-url origin https://github.com/Pavangitu/Pavangitu.git
 )
 
 echo.
@@ -41,21 +44,9 @@ echo Committing changes...
 git commit -m "%commit_msg%"
 
 echo.
-echo Pushing to GitHub (main branch)...
-echo Note: If this is the first push or if authentication is required, Git will prompt you.
-git push -u origin main
-
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo [WARNING] Push failed. If the remote repository has changes you don't have locally,
-    echo you may need to pull first or force push.
-    echo.
-    set /p force_push="Would you like to force push? (y/n): "
-    if /I "%force_push%"=="y" (
-        echo Force pushing to origin main...
-        git push -f origin main
-    )
-)
+echo Pushing React project and README to Pavangitu (special profile repository)...
+echo Note: Ensure you have created a PUBLIC repository named 'Pavangitu' on GitHub!
+git push -f origin main
 
 echo.
 echo Operation complete.

@@ -36,7 +36,7 @@ const assetCopier = () => {
       });
 
       // Also sync root documents to public
-      const docs = ['README.md', 'Pavan-Datta-Gedila1.pdf', 'pavan Profile.pdf', 'pavan datta.pdf'];
+      const docs = ['README.md', 'Pavan-Datta-Gedila1.pdf', 'pavan Profile.pdf', 'pavan datta.pdf', 'luffy_widget.svg'];
       docs.forEach(doc => {
         const srcPath = path.resolve(process.cwd(), doc);
         if (fs.existsSync(srcPath)) {
@@ -53,7 +53,7 @@ const assetCopier = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/g.pavn-datta/',
+  base: '/Pavangitu/',
   plugins: [react(), assetCopier()],
   server: {
     port: 3000,

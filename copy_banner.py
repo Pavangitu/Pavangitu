@@ -41,7 +41,8 @@ root_assets = [
     "README.md",
     "Pavan-Datta-Gedila1.pdf",
     "pavan Profile.pdf",
-    "pavan datta.pdf"
+    "pavan datta.pdf",
+    "luffy_widget.svg"
 ]
 
 for asset in root_assets:
