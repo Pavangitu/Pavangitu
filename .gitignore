@@ -1,29 +1,14 @@
 # Dependencies
 node_modules
 .pnpm-store
-/temp_run
 
-# Production build output
-dist
-dist-ssr
+# Local scratch and temp folders
+temp-remote
+pavan-main
+.agent
+.ralphy
+scratch
 
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# IDE and Editors
-.vscode
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# System Files
+# OS and IDE
+.DS_Store
 Thumbs.db
-EHthumbs.db
-Desktop.ini
