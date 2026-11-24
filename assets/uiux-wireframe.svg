@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%" role="img" aria-label="UI/UX Design Architecture &amp; Wireframe Matrix">
+  <title>Pavan Datta Gedila - UI/UX Design Architecture &amp; Wireframe Matrix</title>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="wfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080a"/>
+      <stop offset="50%" stop-color="#050507"/>
+      <stop offset="100%" stop-color="#090709"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="wfCrimsonGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8203A"/>
+      <stop offset="100%" stop-color="#B8893F"/>
+    </linearGradient>
+
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="wfGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#B8893F" stroke-width="0.5" stroke-opacity="0.12"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="wfGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Outer Container with Chamfered Tech Corners -->
+  <path d="M14 0.75 H886 L899.25 14 V266 L886 279.25 H14 L0.75 266 V14 Z" fill="url(#wfBg)" stroke="#B8893F" stroke-width="1.2"/>
+  <rect x="10" y="10" width="880" height="260" fill="url(#wfGrid)"/>
+  <rect x="6" y="6" width="888" height="268" fill="none" stroke="#E8203A" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Corner Brackets -->
+  <g stroke="#E8203A" stroke-width="2" fill="none">
+    <path d="M3 20 V3 H20"/>
+    <path d="M897 20 V3 H880"/>
+    <path d="M3 260 V277 H20"/>
+    <path d="M897 260 V277 H880"/>
+  </g>
+
+  <!-- Top Spec Ribbon Header -->
+  <g transform="translate(24, 18)">
+    <rect x="0" y="0" width="852" height="24" fill="#0d0d12" stroke="#B8893F" stroke-width="0.75" opacity="0.9"/>
+    <!-- Compass Icon -->
+    <g transform="translate(10, 4)" stroke="#F8E028" stroke-width="1.2" fill="none">
+      <circle cx="8" cy="8" r="6"/>
+      <path d="M8 2 V14 M2 8 H14"/>
+    </g>
+    <text x="32" y="16" fill="#F8E028" font-family="'Courier New', monospace" font-size="10.5" font-weight="700" letter-spacing="1.5">UI/UX SYSTEM ARCHITECTURE &amp; WIREFRAME SPEC</text>
+    <text x="470" y="16" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="9.5" letter-spacing="1">GRID: 8PT FLUID · RATIO: 1.618 · RESPONSIVE</text>
+    <text x="840" y="16" text-anchor="end" fill="#E8203A" font-family="'Courier New', monospace" font-size="9.5" font-weight="700" letter-spacing="1">v2.6.4 // ACTIVE</text>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- LEFT: WIREFRAME PROTOTYPE & CALIPERS (0-380px) -->
+  <!-- ============================================== -->
+  <g transform="translate(28, 56)">
+    <!-- Dimension Caliper (Top Width) -->
+    <line x1="0" y1="-4" x2="330" y2="-4" stroke="#B8893F" stroke-width="0.8" opacity="0.7"/>
+    <line x1="0" y1="-8" x2="0" y2="0" stroke="#B8893F" stroke-width="0.8"/>
+    <line x1="330" y1="-8" x2="330" y2="0" stroke="#B8893F" stroke-width="0.8"/>
+    <text x="165" y="-9" text-anchor="middle" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">WIDTH: 330px</text>
+
+    <!-- Dimension Caliper (Right Height) -->
+    <line x1="336" y1="0" x2="336" y2="200" stroke="#B8893F" stroke-width="0.8" opacity="0.7"/>
+    <line x1="332" y1="0" x2="340" y2="0" stroke="#B8893F" stroke-width="0.8"/>
+    <line x1="332" y1="200" x2="340" y2="200" stroke="#B8893F" stroke-width="0.8"/>
+    <text x="344" y="105" fill="#B8893F" font-family="'Courier New', monospace" font-size="8" transform="rotate(90, 344, 105)" text-anchor="middle">HEIGHT: 200px</text>
+
+    <!-- Browser Wireframe Frame -->
+    <rect x="0" y="0" width="330" height="200" rx="6" fill="#060608" stroke="#B8893F" stroke-width="1.2"/>
+    
+    <!-- Wireframe Header -->
+    <path d="M0 6 C0 3 3 0 6 0 H324 C327 0 330 3 330 6 V22 H0 Z" fill="#0f0f15"/>
+    <line x1="0" y1="22" x2="330" y2="22" stroke="#B8893F" stroke-width="0.6" opacity="0.5"/>
+    <circle cx="12" cy="11" r="3" fill="#E8203A"/>
+    <circle cx="22" cy="11" r="3" fill="#F8E028"/>
+    <circle cx="32" cy="11" r="3" fill="#25D366"/>
+    <!-- Wireframe URL Input Bar -->
+    <rect x="52" y="6" width="160" height="10" rx="3" fill="#181822" stroke="#B8893F" stroke-width="0.5" opacity="0.7"/>
+    <text x="58" y="14" fill="#888" font-family="'Courier New', monospace" font-size="7">https://pavangitu.cloud/app</text>
+
+    <!-- Wireframe Navbar Mock -->
+    <rect x="12" y="28" width="24" height="8" rx="2" fill="#E8203A" opacity="0.8"/>
+    <line x1="45" y1="32" x2="65" y2="32" stroke="#F8F0E0" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <line x1="75" y1="32" x2="95" y2="32" stroke="#F8F0E0" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <line x1="105" y1="32" x2="125" y2="32" stroke="#F8F0E0" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Search pill -->
+    <rect x="250" y="27" width="68" height="10" rx="5" fill="#14141e" stroke="#B8893F" stroke-width="0.5"/>
+
+    <!-- Wireframe Hero Banner Component -->
+    <g transform="translate(12, 44)">
+      <rect x="0" y="0" width="306" height="66" rx="4" fill="#0a0a0f" stroke="#E8203A" stroke-width="0.8" stroke-dasharray="3,2"/>
+      <!-- Guide Diagonal (Wireframe placeholder indicator) -->
+      <line x1="0" y1="0" x2="70" y2="66" stroke="#E8203A" stroke-width="0.5" opacity="0.3"/>
+      <line x1="70" y1="0" x2="0" y2="66" stroke="#E8203A" stroke-width="0.5" opacity="0.3"/>
+      <rect x="8" y="8" width="54" height="50" fill="#141420" stroke="#B8893F" stroke-width="0.5"/>
+      <circle cx="35" cy="33" r="14" fill="none" stroke="#F8E028" stroke-width="0.8"/>
+      <!-- Text Skeleton Lines -->
+      <line x1="80" y1="18" x2="220" y2="18" stroke="#F8F0E0" stroke-width="4" stroke-linecap="round"/>
+      <line x1="80" y1="30" x2="280" y2="30" stroke="#F8F0E0" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+      <line x1="80" y1="38" x2="260" y2="38" stroke="#F8F0E0" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+      <!-- Chamfered Button CTA -->
+      <path d="M80 48 H140 L146 54 V60 H80 Z" fill="#E8203A"/>
+      <text x="110" y="56" text-anchor="middle" fill="#FFFFFF" font-family="'Courier New', monospace" font-size="7" font-weight="700">EXPLORE</text>
+    </g>
+
+    <!-- Wireframe 2-Column Cards -->
+    <g transform="translate(12, 118)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="148" height="72" rx="4" fill="#0d0d14" stroke="#B8893F" stroke-width="0.8"/>
+      <rect x="8" y="8" width="30" height="24" rx="2" fill="#181824" stroke="#E8203A" stroke-width="0.5"/>
+      <line x1="46" y1="14" x2="135" y2="14" stroke="#F8E028" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="46" y1="22" x2="110" y2="22" stroke="#888" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="8" y1="42" x2="140" y2="42" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+      <line x1="8" y1="50" x2="125" y2="50" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+      <line x1="8" y1="58" x2="90" y2="58" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+      <!-- Card 2 -->
+      <rect x="158" y="0" width="148" height="72" rx="4" fill="#0d0d14" stroke="#B8893F" stroke-width="0.8"/>
+      <rect x="166" y="8" width="30" height="24" rx="2" fill="#181824" stroke="#F8E028" stroke-width="0.5"/>
+      <line x1="204" y1="14" x2="295" y2="14" stroke="#E8203A" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="204" y1="22" x2="270" y2="22" stroke="#888" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="166" y1="42" x2="298" y2="42" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+      <line x1="166" y1="50" x2="280" y2="50" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+      <line x1="166" y1="58" x2="250" y2="58" stroke="#F8F0E0" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    </g>
+
+    <!-- Floating Pointer Cursor -->
+    <g transform="translate(142, 94)">
+      <polygon points="0,0 4,14 8,10 14,14 16,11 10,7 14,5" fill="#F8E028" stroke="#050505" stroke-width="1"/>
+      <circle cx="1" cy="1" r="3" fill="none" stroke="#E8203A" stroke-width="1" filter="url(#wfGlow)"/>
+    </g>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- CENTER: DESIGN TOKENS & UI SPECS (400-660px)   -->
+  <!-- ============================================== -->
+  <g transform="translate(405, 56)">
+    <!-- Section Title -->
+    <text x="0" y="10" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="11" font-weight="700" letter-spacing="1.2">// DESIGN SYSTEM TOKENS</text>
+    <line x1="0" y1="16" x2="250" y2="16" stroke="#B8893F" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Color Swatches Matrix -->
+    <g transform="translate(0, 26)">
+      <!-- Swatch 1: Obsidian -->
+      <rect x="0" y="0" width="22" height="22" rx="3" fill="#050505" stroke="#B8893F" stroke-width="0.8"/>
+      <text x="28" y="11" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="9" font-weight="700">#050505</text>
+      <text x="28" y="21" fill="#888" font-family="'Courier New', monospace" font-size="7.5">SURFACE / OBSIDIAN</text>
+
+      <!-- Swatch 2: Crimson -->
+      <rect x="130" y="0" width="22" height="22" rx="3" fill="#E8203A" stroke="#FFFFFF" stroke-width="0.5"/>
+      <text x="158" y="11" fill="#E8203A" font-family="'Courier New', monospace" font-size="9" font-weight="700">#E8203A</text>
+      <text x="158" y="21" fill="#888" font-family="'Courier New', monospace" font-size="7.5">ACCENT / CRIMSON</text>
+
+      <!-- Swatch 3: Gold -->
+      <rect x="0" y="32" width="22" height="22" rx="3" fill="#B8893F" stroke="#FFFFFF" stroke-width="0.5"/>
+      <text x="28" y="43" fill="#B8893F" font-family="'Courier New', monospace" font-size="9" font-weight="700">#B8893F</text>
+      <text x="28" y="53" fill="#888" font-family="'Courier New', monospace" font-size="7.5">TRIM / AUREATE GOLD</text>
+
+      <!-- Swatch 4: Radiant Yellow -->
+      <rect x="130" y="32" width="22" height="22" rx="3" fill="#F8E028" stroke="#050505" stroke-width="0.5"/>
+      <text x="158" y="43" fill="#F8E028" font-family="'Courier New', monospace" font-size="9" font-weight="700">#F8E028</text>
+      <text x="158" y="53" fill="#888" font-family="'Courier New', monospace" font-size="7.5">SIGNAL / RADIANT AMBER</text>
+    </g>
+
+    <!-- Typography Specs -->
+    <g transform="translate(0, 96)">
+      <text x="0" y="10" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="11" font-weight="700" letter-spacing="1.2">// TYPOGRAPHY HIERARCHY</text>
+      <line x1="0" y1="16" x2="250" y2="16" stroke="#B8893F" stroke-width="0.8" opacity="0.6"/>
+
+      <!-- H1 / Display -->
+      <text x="0" y="32" fill="#F8F0E0" font-family="Cinzel, 'Playfair Display', serif" font-size="14" font-weight="700">H1 Didone Display</text>
+      <text x="180" y="32" fill="#B8893F" font-family="'Courier New', monospace" font-size="8.5">36px / 1.15</text>
+
+      <!-- Body / UI -->
+      <text x="0" y="50" fill="#F8F0E0" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Body &amp; Component Sans</text>
+      <text x="180" y="50" fill="#B8893F" font-family="'Courier New', monospace" font-size="8.5">14px / 1.50</text>
+
+      <!-- Code Mono -->
+      <text x="0" y="68" fill="#F8E028" font-family="'Courier New', monospace" font-size="11" font-weight="700">Telemetry Monospace</text>
+      <text x="180" y="68" fill="#B8893F" font-family="'Courier New', monospace" font-size="8.5">11px / 1.40</text>
+    </g>
+
+    <!-- Component Primitives -->
+    <g transform="translate(0, 178)">
+      <rect x="0" y="0" width="118" height="22" fill="#0d0d12" stroke="#E8203A" stroke-width="1"/>
+      <text x="59" y="14" text-anchor="middle" fill="#E8203A" font-family="'Courier New', monospace" font-size="8.5" font-weight="700">CHAMFER: 45°</text>
+
+      <rect x="128" y="0" width="122" height="22" rx="4" fill="#0d0d12" stroke="#B8893F" stroke-width="1"/>
+      <text x="189" y="14" text-anchor="middle" fill="#B8893F" font-family="'Courier New', monospace" font-size="8.5" font-weight="700">ELEVATION: 16px</text>
+    </g>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- RIGHT: ISOMETRIC ARCHITECTURE & BREAKPOINTS    -->
+  <!-- ============================================== -->
+  <g transform="translate(685, 56)">
+    <!-- Breakpoint Status Stack -->
+    <text x="0" y="10" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="11" font-weight="700" letter-spacing="1.2">// VIEWPORTS &amp; MATRICES</text>
+    <line x1="0" y1="16" x2="190" y2="16" stroke="#B8893F" stroke-width="0.8" opacity="0.6"/>
+
+    <g transform="translate(0, 24)">
+      <!-- Desktop Breakpoint -->
+      <rect x="0" y="0" width="190" height="20" rx="3" fill="#0c0c14" stroke="#E8203A" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="3" fill="#25D366"/>
+      <text x="20" y="14" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="8.5" font-weight="700">DESKTOP</text>
+      <text x="180" y="14" text-anchor="end" fill="#F8E028" font-family="'Courier New', monospace" font-size="8">1440px / 12-COL</text>
+
+      <!-- Tablet Breakpoint -->
+      <rect x="0" y="26" width="190" height="20" rx="3" fill="#0c0c14" stroke="#B8893F" stroke-width="0.8"/>
+      <circle cx="10" cy="36" r="3" fill="#25D366"/>
+      <text x="20" y="40" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="8.5" font-weight="700">TABLET</text>
+      <text x="180" y="40" text-anchor="end" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">768px / 8-COL</text>
+
+      <!-- Mobile Breakpoint -->
+      <rect x="0" y="52" width="190" height="20" rx="3" fill="#0c0c14" stroke="#B8893F" stroke-width="0.8"/>
+      <circle cx="10" cy="62" r="3" fill="#25D366"/>
+      <text x="20" y="66" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="8.5" font-weight="700">MOBILE</text>
+      <text x="180" y="66" text-anchor="end" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">375px / 4-COL</text>
+    </g>
+
+    <!-- Isometric Wireframe Cube Schematic -->
+    <g transform="translate(95, 148)">
+      <!-- Isometric Cube Polygons -->
+      <!-- Top Face -->
+      <polygon points="0,-24 35,-6 0,12 -35,-6" fill="#141420" stroke="#B8893F" stroke-width="1.2"/>
+      <!-- Left Face -->
+      <polygon points="-35,-6 0,12 0,48 -35,30" fill="#0a0a10" stroke="#E8203A" stroke-width="1.2"/>
+      <!-- Right Face -->
+      <polygon points="0,12 35,-6 35,30 0,48" fill="#06060c" stroke="#F8E028" stroke-width="1.2"/>
+      
+      <!-- Internal Nodes / Vertices Glow -->
+      <circle cx="0" cy="-24" r="2.5" fill="#F8E028" filter="url(#wfGlow)"/>
+      <circle cx="35" cy="-6" r="2.5" fill="#E8203A" filter="url(#wfGlow)"/>
+      <circle cx="-35" cy="-6" r="2.5" fill="#B8893F" filter="url(#wfGlow)"/>
+      <circle cx="0" cy="12" r="3" fill="#FFFFFF" filter="url(#wfGlow)"/>
+      <circle cx="0" cy="48" r="2.5" fill="#E8203A" filter="url(#wfGlow)"/>
+      <circle cx="-35" cy="30" r="2.5" fill="#F8E028" filter="url(#wfGlow)"/>
+      <circle cx="35" cy="30" r="2.5" fill="#B8893F" filter="url(#wfGlow)"/>
+
+      <!-- Orbit Rings -->
+      <ellipse cx="0" cy="12" rx="55" ry="20" fill="none" stroke="#E8203A" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.6"/>
+      <text x="0" y="65" text-anchor="middle" fill="#B8893F" font-family="'Courier New', monospace" font-size="8" letter-spacing="1.2">SYSTEM MESH: 3D</text>
+    </g>
+  </g>
+</svg>

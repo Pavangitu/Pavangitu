@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" width="240" height="40" role="img" aria-label="CONNECT ON LINKEDIN">
+  <title>CONNECT ON LINKEDIN</title>
+  <path d="M8 0.5 H239.5 V32 L231.5 39.5 H0.5 V8 Z" fill="#F8E028" stroke="#F8E028" stroke-width="1.2"/>
+  <circle cx="22" cy="20" r="11" fill="none" stroke="#050505" stroke-width="1.8"/>
+  <text x="22" y="24" text-anchor="middle" fill="#050505" font-family="'Courier New', monospace" font-size="14" font-weight="900">in</text>
+  <text x="44" y="21" fill="#050505" font-family="'Cinzel', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" letter-spacing="1">CONNECT ON LINKEDIN</text>
+  <text x="44" y="32" fill="#050505" font-family="'Cinzel', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.5" opacity="0.8">PAVAN DATTA GEDILA</text>
+</svg>

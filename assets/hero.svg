@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%" role="img" aria-label="Pavan Datta Gedila - Cloud &amp; Full-Stack Software Engineer">
+  <title>Pavan Datta Gedila (Pavangitu) - Cloud Architecture &amp; Full-Stack AI</title>
+  <defs>
+    <!-- Dark Marble Background Gradient -->
+    <linearGradient id="bgBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="50%" stop-color="#08080a"/>
+      <stop offset="100%" stop-color="#040404"/>
+    </linearGradient>
+
+    <!-- Gold Gradients -->
+    <linearGradient id="goldVein" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8893F" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#F8E028" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#B8893F" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8E028"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="80%" stop-color="#996515"/>
+      <stop offset="100%" stop-color="#B8893F"/>
+    </linearGradient>
+
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A45"/>
+      <stop offset="100%" stop-color="#B30018"/>
+    </linearGradient>
+
+    <!-- Radar Sector Gradient -->
+    <radialGradient id="radarSweep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8203A" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#E8203A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#E8203A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Greek Fret Pattern for Corner Framing -->
+    <pattern id="greekFretH" width="20" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 10 H14 V2 H6 V6 H10 V4" fill="none" stroke="#A09080" stroke-width="1.2" opacity="0.6"/>
+    </pattern>
+
+    <pattern id="greekFretV" width="12" height="20" patternUnits="userSpaceOnUse">
+      <path d="M10 0 V14 H2 V6 H6 V10 H4" fill="none" stroke="#A09080" stroke-width="1.2" opacity="0.6"/>
+    </pattern>
+
+    <!-- Filter for Calligraphy Glow -->
+    <filter id="crimsonNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="380" fill="url(#bgBase)"/>
+
+  <!-- Organic Gold Marble Veins -->
+  <g opacity="0.45" stroke="#B8893F" fill="none" stroke-linecap="round">
+    <path d="M-20 80 Q 220 160 410 70 T 820 190 T 1220 90" stroke-width="0.75" opacity="0.35"/>
+    <path d="M150 -10 Q 290 140 180 270 T 420 390" stroke-width="0.6" opacity="0.25"/>
+    <path d="M720 -20 Q 860 120 790 240 T 1030 400" stroke-width="0.7" opacity="0.3"/>
+    <path d="M600 390 Q 750 250 890 290 T 1220 220" stroke-width="0.5" opacity="0.2"/>
+    <path d="M-10 280 Q 180 320 320 230 T 640 280" stroke-width="0.6" opacity="0.25"/>
+  </g>
+
+  <!-- Outer Architectural Framing Lines -->
+  <rect x="24" y="24" width="1152" height="332" fill="none" stroke="#B8893F" stroke-width="1.4" opacity="0.6"/>
+  <rect x="30" y="30" width="1140" height="320" fill="none" stroke="#E8203A" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- ========================================== -->
+  <!-- CORNER ARCHITECTURAL GREEK FRET & ACCENTS -->
+  <!-- ========================================== -->
+
+  <!-- Top-Left Corner -->
+  <g transform="translate(24, 24)">
+    <!-- Red Accent Corner Block -->
+    <rect x="0" y="0" width="14" height="14" fill="#E8203A"/>
+    <rect x="2" y="2" width="10" height="10" fill="#050505"/>
+    <rect x="4" y="4" width="6" height="6" fill="#E8203A"/>
+    <!-- Greek Meander Segments -->
+    <path d="M18 4 H105 M18 10 H105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <path d="M4 18 V105 M10 18 V105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <!-- Meander frets -->
+    <rect x="22" y="3" width="80" height="8" fill="url(#greekFretH)"/>
+    <rect x="3" y="22" width="8" height="80" fill="url(#greekFretV)"/>
+    <line x1="0" y1="110" x2="16" y2="110" stroke="#E8203A" stroke-width="2"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#E8203A" stroke-width="2"/>
+  </g>
+
+  <!-- Top-Right Corner -->
+  <g transform="translate(1176, 24) scale(-1, 1)">
+    <rect x="0" y="0" width="14" height="14" fill="#E8203A"/>
+    <rect x="2" y="2" width="10" height="10" fill="#050505"/>
+    <rect x="4" y="4" width="6" height="6" fill="#E8203A"/>
+    <path d="M18 4 H105 M18 10 H105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <path d="M4 18 V105 M10 18 V105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <rect x="22" y="3" width="80" height="8" fill="url(#greekFretH)"/>
+    <rect x="3" y="22" width="8" height="80" fill="url(#greekFretV)"/>
+    <line x1="0" y1="110" x2="16" y2="110" stroke="#E8203A" stroke-width="2"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#E8203A" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom-Left Corner -->
+  <g transform="translate(24, 356) scale(1, -1)">
+    <rect x="0" y="0" width="14" height="14" fill="#E8203A"/>
+    <rect x="2" y="2" width="10" height="10" fill="#050505"/>
+    <rect x="4" y="4" width="6" height="6" fill="#E8203A"/>
+    <path d="M18 4 H105 M18 10 H105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <path d="M4 18 V105 M10 18 V105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <rect x="22" y="3" width="80" height="8" fill="url(#greekFretH)"/>
+    <rect x="3" y="22" width="8" height="80" fill="url(#greekFretV)"/>
+    <line x1="0" y1="110" x2="16" y2="110" stroke="#E8203A" stroke-width="2"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#E8203A" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom-Right Corner -->
+  <g transform="translate(1176, 356) scale(-1, -1)">
+    <rect x="0" y="0" width="14" height="14" fill="#E8203A"/>
+    <rect x="2" y="2" width="10" height="10" fill="#050505"/>
+    <rect x="4" y="4" width="6" height="6" fill="#E8203A"/>
+    <path d="M18 4 H105 M18 10 H105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <path d="M4 18 V105 M10 18 V105" stroke="#B8893F" stroke-width="0.8" opacity="0.65"/>
+    <rect x="22" y="3" width="80" height="8" fill="url(#greekFretH)"/>
+    <rect x="3" y="22" width="8" height="80" fill="url(#greekFretV)"/>
+    <line x1="0" y1="110" x2="16" y2="110" stroke="#E8203A" stroke-width="2"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#E8203A" stroke-width="2"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- LEFT / CENTER TYPOGRAPHY SECTION           -->
+  <!-- ========================================== -->
+
+  <!-- Top Category Bar: ── Cloud Computing / Full-Stack & AI ── -->
+  <g>
+    <line x1="68" y1="92" x2="190" y2="92" stroke="#F8F0E0" stroke-width="1.1" opacity="0.55"/>
+    <text x="390" y="96" text-anchor="middle" fill="#F8F0E0" font-family="'Cinzel', 'Playfair Display', 'Didot', 'Times New Roman', serif" font-size="20" font-weight="500" letter-spacing="3.8">Cloud Computing / Full-Stack &amp; AI</text>
+    <line x1="590" y1="92" x2="712" y2="92" stroke="#F8F0E0" stroke-width="1.1" opacity="0.55"/>
+  </g>
+
+  <!-- Big Monumental Title: PAVAN -->
+  <text x="70" y="215" fill="#F8F0E0" font-family="'Didot', 'Bodoni MT', 'Cinzel', 'Playfair Display', serif" font-size="132" font-weight="900" letter-spacing="16" style="filter: drop-shadow(0 4px 15px rgba(0,0,0,0.9));">PAVAN</text>
+
+  <!-- Crimson Calligraphy Overlay: Gedila (overlapping lower-left of PAVAN) -->
+  <g filter="url(#crimsonNeon)">
+    <text x="145" y="260" fill="#E8203A" font-family="'Brush Script MT', 'Great Vibes', 'Edwardian Script ITC', 'Bickham Script Pro', cursive" font-size="102" font-weight="normal" font-style="italic">Gedila</text>
+  </g>
+
+  <!-- Tagline Quote: Defend the gate. Build the cloud. -->
+  <text x="75" y="302" fill="#F8F0E0" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-style="italic" font-size="21" letter-spacing="1.2" opacity="0.95">Architect the cloud. Build the future.</text>
+
+  <!-- Bottom URL Bar: ── G I T H U B . C O M / P A V A N G I T U ── -->
+  <g>
+    <line x1="72" y1="332" x2="250" y2="332" stroke="#B8893F" stroke-width="0.8" opacity="0.5"/>
+    <text x="390" y="336" text-anchor="middle" fill="#B8893F" font-family="'Cinzel', 'Courier New', monospace" font-size="12" font-weight="600" letter-spacing="6.5">G I T H U B . C O M / P A V A N G I T U</text>
+    <line x1="530" y1="332" x2="708" y2="332" stroke="#B8893F" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RIGHT-HAND MONUMENTAL SEAL / MEDALLION     -->
+  <!-- Center: cx = 955, cy = 190, r = 125        -->
+  <!-- ========================================== -->
+
+  <g transform="translate(955, 190)">
+    <!-- Medallion Background Base -->
+    <circle cx="0" cy="0" r="115" fill="#040406" stroke="#B8893F" stroke-width="1.8" opacity="0.9"/>
+    <circle cx="0" cy="0" r="122" fill="none" stroke="#F8E028" stroke-width="0.8" opacity="0.45" stroke-dasharray="3,3"/>
+
+    <!-- Subtle Radar Angle / Crosshair Sweep -->
+    <path d="M 0 0 L 0 -115 A 115 115 0 0 1 100 -57 Z" fill="url(#radarSweep)"/>
+    <line x1="-115" y1="0" x2="115" y2="0" stroke="#B8893F" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.45"/>
+    <line x1="0" y1="-115" x2="0" y2="115" stroke="#B8893F" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.45"/>
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#B8893F" stroke-width="0.6" stroke-dasharray="2,3" opacity="0.4"/>
+
+    <!-- Circular Track Inscription Path -->
+    <path id="sealTextPath" d="M 0 -98 A 98 98 0 1 1 -0.1 -98" fill="none"/>
+    <text fill="#F8E028" font-family="'Cinzel', -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="3.2" opacity="0.9">
+      <textPath href="#sealTextPath" startOffset="50%" text-anchor="middle">
+        • PAVANGITU • CLOUD ARCHITECT • FULL-STACK ENGINEER •
+      </textPath>
+    </text>
+
+    <!-- Classical Greek Fluted Columns (Left & Right framing the center) -->
+    <!-- Left Column (x = -62) -->
+    <g transform="translate(-64, -50)">
+      <!-- Capital -->
+      <rect x="-8" y="0" width="16" height="4" fill="#F8F0E0" opacity="0.85"/>
+      <rect x="-10" y="-3" width="20" height="3" fill="#B8893F"/>
+      <!-- Shaft -->
+      <line x1="-5" y1="4" x2="-5" y2="95" stroke="#F8F0E0" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-2" y1="4" x2="-2" y2="95" stroke="#B8893F" stroke-width="1.2" opacity="0.8"/>
+      <line x1="2" y1="4" x2="2" y2="95" stroke="#B8893F" stroke-width="1.2" opacity="0.8"/>
+      <line x1="5" y1="4" x2="5" y2="95" stroke="#F8F0E0" stroke-width="1.2" opacity="0.7"/>
+      <!-- Base -->
+      <rect x="-8" y="95" width="16" height="4" fill="#F8F0E0" opacity="0.85"/>
+      <rect x="-10" y="99" width="20" height="3" fill="#B8893F"/>
+    </g>
+
+    <!-- Right Column (x = 64) -->
+    <g transform="translate(64, -50)">
+      <!-- Capital -->
+      <rect x="-8" y="0" width="16" height="4" fill="#F8F0E0" opacity="0.85"/>
+      <rect x="-10" y="-3" width="20" height="3" fill="#B8893F"/>
+      <!-- Shaft -->
+      <line x1="-5" y1="4" x2="-5" y2="95" stroke="#F8F0E0" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-2" y1="4" x2="-2" y2="95" stroke="#B8893F" stroke-width="1.2" opacity="0.8"/>
+      <line x1="2" y1="4" x2="2" y2="95" stroke="#B8893F" stroke-width="1.2" opacity="0.8"/>
+      <line x1="5" y1="4" x2="5" y2="95" stroke="#F8F0E0" stroke-width="1.2" opacity="0.7"/>
+      <!-- Base -->
+      <rect x="-8" y="95" width="16" height="4" fill="#F8F0E0" opacity="0.85"/>
+      <rect x="-10" y="99" width="20" height="3" fill="#B8893F"/>
+    </g>
+
+    <!-- Central Classical Monogram: P (Ivory) + D (Crimson) -->
+    <g transform="translate(0, 10)">
+      <text x="-16" y="8" text-anchor="middle" fill="#F8F0E0" font-family="'Didot', 'Bodoni MT', 'Cinzel', serif" font-size="64" font-weight="900" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8));">P</text>
+      <text x="18" y="8" text-anchor="middle" fill="#E8203A" font-family="'Didot', 'Bodoni MT', 'Cinzel', serif" font-size="64" font-weight="900" style="filter: drop-shadow(0 0 10px rgba(232,32,58,0.7));">D</text>
+      <!-- Small dividing cross dot -->
+      <circle cx="1" cy="-4" r="2.2" fill="#F8E028"/>
+    </g>
+
+    <!-- Roman Numeral MMXXVI (2026) below Monogram -->
+    <text x="0" y="52" text-anchor="middle" fill="#B8893F" font-family="'Cinzel', serif" font-size="12" font-weight="700" letter-spacing="3.5">MMXXVI</text>
+
+    <!-- Golden Laurel Wreath Branches (Outer Wreath Ring) -->
+    <!-- Left Wreath Branch -->
+    <g stroke="url(#goldMetallic)" fill="url(#goldMetallic)" stroke-width="0.8">
+      <!-- Main stem -->
+      <path d="M 0 134 C -80 134 -138 75 -138 0 C -138 -65 -90 -125 -15 -136" fill="none" stroke-width="2.2"/>
+      <!-- Leaves along left curve -->
+      <path d="M -15 -136 Q -30 -148 -25 -132 Q -22 -122 -15 -136 Z"/>
+      <path d="M -45 -125 Q -65 -135 -56 -120 Q -50 -110 -45 -125 Z"/>
+      <path d="M -75 -105 Q -98 -112 -88 -98 Q -80 -88 -75 -105 Z"/>
+      <path d="M -102 -75 Q -125 -80 -115 -66 Q -105 -56 -102 -75 Z"/>
+      <path d="M -122 -40 Q -145 -42 -135 -28 Q -126 -18 -122 -40 Z"/>
+      <path d="M -132 -2 Q -154 -2 -143 12 Q -134 22 -132 -2 Z"/>
+      <path d="M -130 38 Q -150 44 -138 56 Q -128 64 -130 38 Z"/>
+      <path d="M -115 75 Q -132 86 -119 96 Q -110 102 -115 75 Z"/>
+      <path d="M -90 108 Q -102 122 -88 128 Q -80 130 -90 108 Z"/>
+      <path d="M -50 128 Q -60 142 -44 142 Q -38 140 -50 128 Z"/>
+      <path d="M -15 136 Q -22 150 -6 146 Q 0 142 -15 136 Z"/>
+    </g>
+
+    <!-- Right Wreath Branch (Mirrored) -->
+    <g transform="scale(-1, 1)" stroke="url(#goldMetallic)" fill="url(#goldMetallic)" stroke-width="0.8">
+      <path d="M 0 134 C -80 134 -138 75 -138 0 C -138 -65 -90 -125 -15 -136" fill="none" stroke-width="2.2"/>
+      <path d="M -15 -136 Q -30 -148 -25 -132 Q -22 -122 -15 -136 Z"/>
+      <path d="M -45 -125 Q -65 -135 -56 -120 Q -50 -110 -45 -125 Z"/>
+      <path d="M -75 -105 Q -98 -112 -88 -98 Q -80 -88 -75 -105 Z"/>
+      <path d="M -102 -75 Q -125 -80 -115 -66 Q -105 -56 -102 -75 Z"/>
+      <path d="M -122 -40 Q -145 -42 -135 -28 Q -126 -18 -122 -40 Z"/>
+      <path d="M -132 -2 Q -154 -2 -143 12 Q -134 22 -132 -2 Z"/>
+      <path d="M -130 38 Q -150 44 -138 56 Q -128 64 -130 38 Z"/>
+      <path d="M -115 75 Q -132 86 -119 96 Q -110 102 -115 75 Z"/>
+      <path d="M -90 108 Q -102 122 -88 128 Q -80 130 -90 108 Z"/>
+      <path d="M -50 128 Q -60 142 -44 142 Q -38 140 -50 128 Z"/>
+      <path d="M -15 136 Q -22 150 -6 146 Q 0 142 -15 136 Z"/>
+    </g>
+
+    <!-- Bottom Joining Ribbon / Crimson Diamond -->
+    <polygon points="0,136 -6,143 0,150 6,143" fill="#E8203A"/>
+    <circle cx="0" cy="143" r="2" fill="#F8E028"/>
+  </g>
+</svg>

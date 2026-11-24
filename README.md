@@ -1,338 +1,442 @@
-# <p align="center"><img src="./github_banner.svg" alt="Pavan Datta Gedila Header" width="100%" /></p>
+<div align="center">
 
-<h1 align="center">⚡ Pavan Datta Gedila</h1>
+<img src="./assets/hero.svg" alt="Pavan Datta Gedila - Cloud &amp; Full-Stack Software Engineer" width="100%">
+
+<br><br>
+
 <p align="center">
-  <strong>Cloud & Full-Stack Developer | DevOps & Infrastructure Engineer</strong>
+  <a href="https://github.com/Pavangitu?tab=followers"><img src="https://img.shields.io/github/followers/Pavangitu?style=for-the-badge&label=FOLLOWERS&labelColor=050505&color=E8203A" alt="GitHub followers" height="34"></a>
+  &nbsp;
+  <img src="./assets/badge-rank.svg" alt="Cloud &amp; Full-Stack Developer" height="34">
+  &nbsp;
+  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369"><img src="./assets/badge-linkedin.svg" alt="Connect on LinkedIn" height="34"></a>
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=7AA2F7&center=true&vCenter=true&width=600&lines=Cloud+Computing+Intern;Full-Stack+Developer;DevOps+%26+Backend+Enthusiast;AI+%26+Automation+Engineer" alt="Typing SVG" />
+  <img src="./assets/interests.svg" alt="Cloud Architecture, DevOps &amp; Docker, Full-Stack Systems, Generative AI &amp; ML, IoT &amp; Embedded" width="760">
+</p>
+
+<br>
+
+<p align="center">
+  <img src="./assets/pavan-avatar.svg" alt="Pavan Datta Gedila" width="160" height="160">
 </p>
 
 <p align="center">
-  <a href="https://pavangitu.github.io/Pavangitu/" target="_blank">
-    <img src="https://img.shields.io/badge/🔮_View_My_Interactive_Profile_&_Live_Desktop_Pet-Click_Here-FF007F?style=for-the-badge&logo=react&logoColor=white" alt="Live Interactive Profile" />
-  </a>
+  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=050505" alt="LinkedIn"></a>
+  <a href="mailto:pavandattagedila@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050505" alt="Email"></a>
+  <a href="https://wa.me/918249397556"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=050505" alt="WhatsApp"></a>
+  <a href="https://x.com/DattaGedila"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=050505" alt="X"></a>
 </p>
 
-<!-- Animated Profile Desktop Pet Widget -->
-<p align="center">
-  <img src="./luffy_widget.svg" alt="Gear 5 Luffy Desktop Pet Widget" width="100%" />
-</p>
+</div>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=pavangitu&label=Profile%20views&color=7aa2f7&style=flat-square" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/pavangitu?label=Followers&style=flat-square&color=bb9af3" alt="Followers" />
-  <img src="https://img.shields.io/badge/Tokyo_Night-Theme-7aa2f7?style=flat-square" alt="Theme Tokyo Night" />
-</p>
+<br>
 
-<p align="center">
-  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:pavandattagedila@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/Pavangitu" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://leetcode.com/pavangitu" target="_blank"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-</p>
+<div align="center">
+  <img src="./assets/tech-hud.svg" alt="System HUD Telemetry" width="100%">
+</div>
 
----
+<br>
 
-## 🔮 About Me
+<h2 align="center"><img src="./assets/h-about.svg" alt="About" width="100%"></h2>
 
-<table width="100%">
-  <tr>
-    <td width="55%" valign="top">
-      <h3>🚀 Engineering Mindset</h3>
-      <p>I am a passionate <strong>Computer Science Engineering</strong> student specializing in cloud technology, containerized deployments, and high-performance server-side architectures.</p>
-      <p>My focus lies in building scalable, secure, and automated systems using cloud services (AWS/Azure) and modern DevOps practices. I enjoy bridging the gap between code and infrastructure to create robust end-to-end applications.</p>
-      <ul>
-        <li>🎓 <strong>Education:</strong> B.Tech in CSE at Centurion University of Technology and Management, Odisha (2023 - 2027) — <strong>CGPA: 8.3/10</strong></li>
-        <li>📍 <strong>Location:</strong> Hyderabad / Odisha, India</li>
-        <li>🔭 <strong>Currently Working On:</strong> <a href="https://github.com/Pavangitu/CareerWith">AI Resume Builder (ATS Optimized)</a></li>
-        <li>🌱 <strong>Currently Learning:</strong> Android Applications with Firebase, AWS Cloud Infrastructure & Advanced DevOps Pipelines</li>
-        <li>👯 <strong>Looking to Collaborate On:</strong> <a href="https://github.com/Pavangitu/LuffyDesktopPet">Desktop Pet for Windows</a></li>
-        <li>🤝 <strong>Looking for Help With:</strong> AWS Cloud Projects & Infrastructure Orchestration</li>
-        <li>📫 <strong>How to Reach Me:</strong> <a href="mailto:pavandattagedila@gmail.com">pavandattagedila@gmail.com</a></li>
-      </ul>
-    </td>
-    <td width="45%" valign="top">
-      <h3>⚡ Core Competencies</h3>
-      <ul>
-        <li>☁️ <strong>Cloud Platforms:</strong> AWS (EC2, RDS, S3, IAM, VPC), Azure Fundamentals</li>
-        <li>⚙️ <strong>Backend & Systems:</strong> Node.js, Express, PySide6, Python, Windows API</li>
-        <li>🛠️ <strong>DevOps & Tools:</strong> Docker, Containerization, Git, GitHub Actions, AWS CLI</li>
-        <li>🌐 <strong>Web Development:</strong> React 19, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS v4</li>
-        <li>🗄️ <strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Firebase</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
----
-
-## 💼 Featured Projects
-
-<table width="100%">
-  <!-- Project 1 -->
-  <tr>
-    <td width="100%" colspan="2">
-      <h3>🌐 AWS Dockerized Node.js Services</h3>
-      <p><em>Automated Cloud Deployment Pipeline</em></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>📋 Overview & Tech Stack</strong><br/>
-      Deployed a fully containerized Node.js application hosted on AWS EC2 integrated with AWS RDS (MySQL).
-      <br/>
-      <code>AWS EC2</code> <code>RDS (MySQL)</code> <code>Docker</code> <code>VPC</code> <code>IAM Roles</code> <code>Git</code>
-    </td>
-    <td width="50%" valign="top">
-      <strong>🛠️ Challenges & Features</strong>
-      <ul>
-        <li>Configured dedicated multi-subnet VPC with public/private division.</li>
-        <li>Implemented strict security groups and IAM roles to restrict database access.</li>
-        <li>Eliminated local database dependency using production-grade RDS engines.</li>
-      </ul>
-    </td>
-  </tr>
-
-  <!-- Project 2 -->
-  <tr>
-    <td width="100%" colspan="2"><hr/><h3>🤖 CareerWith: AI Resume Builder (ATS Optimized)</h3><p><em>AI-Driven Semantic Resume Engine</em></p></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>📋 Overview & Tech Stack</strong><br/>
-      An auto-scaling single-page resume engine utilizing Gemini AI to suggest tailormade content based on roles.
-      <br/>
-      <code>React 19</code> <code>TypeScript</code> <code>Express</code> <code>Tailwind CSS v4</code> <code>Gemini AI API</code>
-    </td>
-    <td width="50%" valign="top">
-      <strong>🛠️ Challenges & Features</strong>
-      <ul>
-        <li>Engineered parser-friendly PDF outputs optimized for Applicant Tracking Systems (ATS).</li>
-        <li>Built an asset staging pipeline that automatically discovers and syncs local documents.</li>
-        <li>Integrated Gemini AI suggestions using prompt engineering and structured schema outputs.</li>
-      </ul>
-    </td>
-  </tr>
-
-  <!-- Project 3 -->
-  <tr>
-    <td width="100%" colspan="2"><hr/><h3>👾 Gear 5 Luffy: Desktop Pet Widget</h3><p><em>Interactive OS Widget with PyQt</em></p></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>📋 Overview & Tech Stack</strong><br/>
-      An interactive, animated desktop pet that roams around the user's screen with physics and collision detection.
-      <br/>
-      <code>Python</code> <code>PySide6 (Qt)</code> <code>Windows API</code> <code>Pillow</code>
-    </td>
-    <td width="50%" valign="top">
-      <strong>🛠️ Challenges & Features</strong>
-      <ul>
-        <li>Implemented a custom collision detection system to handle desktop boundary hits.</li>
-        <li>Designed a transparent frameless window widget running on a background processing thread.</li>
-        <li>Configured low-overhead rendering cycles for minimal CPU and RAM usage.</li>
-      </ul>
-    </td>
-  </tr>
-
-  <!-- Project 4 -->
-  <tr>
-    <td width="100%" colspan="2"><hr/><h3>📄 OCR Automated Document Conversion System</h3><p><em>AI Document Processing Pipeline</em></p></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>📋 Overview & Tech Stack</strong><br/>
-      An automated tool that scans and extracts structured text data from images and PDFs.
-      <br/>
-      <code>Python</code> <code>Tesseract OCR</code> <code>Pillow</code> <code>Regex Engine</code>
-    </td>
-    <td width="50%" valign="top">
-      <strong>🛠️ Challenges & Features</strong>
-      <ul>
-        <li>Reduced manual data entry time by <strong>70%</strong> using script automation.</li>
-        <li>Integrated adaptive thresholding filters to improve OCR reading accuracy.</li>
-        <li>Structured unstructured image data into parsed JSON outputs.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
----
-
-## ⚡ Engineering Stack & Tools
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="20%">
-      <strong>💻 Languages</strong><br/><br/>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /><br/>
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" /><br/>
-      <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Matlab-ED1C24?style=flat-square&logo=mathworks&logoColor=white" />
-    </td>
-    <td align="center" width="20%">
-      <strong>🎨 Frontend</strong><br/><br/>
-      <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" /><br/>
-      <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square&logo=adobe-illustrator&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Photoshop-31A8FF?style=flat-square&logo=adobe-photoshop&logoColor=white" />
-    </td>
-    <td align="center" width="20%">
-      <strong>⚙️ Backend & OS</strong><br/><br/>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" /><br/>
-      <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/TCP%2FIP-Networking-blue?style=flat-square" />
-    </td>
-    <td align="center" width="20%">
-      <strong>☁️ Cloud & DevOps</strong><br/><br/>
-      <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=microsoft-azure&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Gulp-CF4647?style=flat-square&logo=gulp&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/AWS_CLI-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" />
-    </td>
-    <td align="center" width="20%">
-      <strong>🗄️ Databases</strong><br/><br/>
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" /><br/>
-      <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" />
-    </td>
-  </tr>
-</table>
-
----
-
-## 🏗️ Professional Experience
-
-```text
- 📈 Samriddhi Anveshana | Summer Intern (May 2026 - Present)
- └── Hyderabad, India | Focus on cloud architecture and service orchestration.
-
- ⚙️ Micro Information Technology Services | Cloud Computing Intern (2024 - Present)
- └── Gained deep experience in cloud deployment models (IaaS, PaaS, SaaS).
- └── Configured cloud assets on AWS and Azure under standard security frameworks.
+```
+  ____   _  __     ___    _   _   ____    _  _____ _____  _    
+ |  _ \ / \ \ \   / / \  | \ | | |  _ \  / \|_   _|_   _|/ \   
+ | |_) / _ \ \ \ / / _ \ |  \| | | | | |/ _ \ | |   | | / _ \  
+ |  __/ ___ \ \ V / ___ \| |\  | | |_| / ___ \| |   | |/ ___ \ 
+ |_| /_/   \_\ \_/_/   \_\_| \_| |____/_/   \_\_|   |_/_/   \_\
 ```
 
----
+👋 **Hello! I'm Pavan Datta Gedila** — a passionate **Cloud & Full-Stack Software Engineer, AI Developer, and IoT Specialist** pursuing a Bachelor of Technology in Computer Science & Engineering at **Centurion University of Technology and Management, Odisha** (2023 – 2027 | **CGPA: 8.3 / 10**).
 
-## 🏆 Certifications & Achievements
-
-*   🏅 **Introduction to Responsible AI** — Google
-*   🏅 **Introduction to Generative AI Studio** — Google
-*   🏅 **Machine Learning Basics** — AWS
-*   🏅 **Master Data Management for Beginners** — TCS
-*   🏅 **Mastering Network Security: Defending Against Cyber Threats** — Cert
-*   🏅 **AI for Students: Build Your Own Generative AI Model** — Cert
-*   🏅 **EY Technology Risk Job Simulation** — EY
-*   🏅 **Learn AutoCAD 2D & 3D: From Zero to Hero** — Udemy
-*   🚀 **AWS Cloud Practitioner Essentials** — (In Progress)
-*   🏆 **College Events:** Actively participated and won prizes in technical hackathons and cloud deployment workshops.
+> **🎯 Career Objective:**  
+> *"To start my professional journey in cloud technology with a progressive organization that values innovation and learning. I aspire to apply my knowledge of cloud architecture, virtualization, and networking to real-world applications."*
 
 ---
 
-## 🌱 Currently Exploring
+### 🌟 Professional Experience & Internships
+
+- 🏢 **Cloud Computing & Full Stack Intern @ Samriddhi Anveshana Pvt. Ltd.** *(2026 – Present | Bengaluru, Karnataka)*
+  - Leading the end-to-end architecture and implementation of an enterprise **Office Management System**.
+  - Developed scalable, interactive frontends using **React 19**, **TypeScript**, and **Tailwind CSS** with responsive mobile-first layouts.
+  - Engineered robust backend microservices in **Spring Boot (Java)** and **Node.js/Express**, containerized using **Docker**, and deployed across **AWS (EC2, S3, RDS MySQL)**.
+  - Implemented secure API authentication, database connection pooling, and continuous deployment automation.
+
+- ☁️ **Cloud Computing Intern @ Micro Information Technology Services** *(2024)*
+  - Implemented and evaluated foundational cloud service models (**IaaS**, **PaaS**, **SaaS**) and deployment patterns.
+  - Gained hands-on expertise in **AWS** services including **EC2**, **VPC**, **IAM**, Subnets, Security Groups, and **S3** storage policies.
+  - Managed virtualization environments, resource allocation, and cloud access security while reducing simulated infrastructure costs.
+
+---
+
+### 🏆 Key Achievements & Milestones
+
+- 🏅 **Technical Events & Hackathons:** Actively participated in university technical symposiums, coding competitions, and hands-on cloud architecture workshops.
+- 🚀 **Cloud Infrastructure Deployments:** Successfully designed, containerized, and deployed multiple scalable mini and enterprise-grade full-stack systems on AWS EC2 & RDS.
+- 🔌 **Open-Source Hardware Simulation Contribution:** Developed and published an open-source **Flame Sensor Library for Proteus CAD**, widely adopted by hardware engineers and IoT researchers for optical circuit simulation.
+- 💻 **Competitive Problem Solving:** Earned certified HackerRank credentials in **Problem Solving** (Basic & Intermediate) and **SQL** (Basic & Intermediate).
+
+---
+
+### 👤 Personal Details & Background
+
+| Attribute | Details |
+| :--- | :--- |
+| **Full Name** | Pavan Datta Gedila |
+| **Date of Birth** | 16 / 06 / 2005 |
+| **Primary Location** | Bengaluru, Karnataka / Odisha, India |
+| **Languages Spoken** | **Telugu** (Native/Full Professional) · **English** (Professional) · **Hindi** (Professional) · **Odia** (Professional Working) |
+| **Hobbies & Interests** | Exploring New Technologies · Algorithmic Problem Solving · Cloud Architecture · Hardware IoT Hacking |
+
+---
+
+<h2 align="center" id="tech-stack--skills"><img src="./assets/h-stack.svg" alt="Tech Stack &amp; Skills" width="100%"></h2>
+
+<div align="center">
+
+<h3>Programming Languages</h3>
+
+<p align="center">
+<img src="./assets/badges/languages/java.svg" alt="Java" height="20">
+<img src="./assets/badges/languages/python.svg" alt="Python" height="20">
+<img src="./assets/badges/languages/typescript.svg" alt="TypeScript" height="20">
+<img src="./assets/badges/languages/javascript.svg" alt="JavaScript" height="20">
+<img src="./assets/badges/languages/cplusplus.svg" alt="C++" height="20">
+<img src="./assets/badges/languages/c.svg" alt="C" height="20">
+<img src="./assets/badges/languages/sql.svg" alt="SQL" height="20">
+<img src="./assets/badges/languages/bash.svg" alt="Bash" height="20">
+</p>
+
+<h3>Cloud, DevOps &amp; Infrastructure</h3>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" height="22" alt="AWS">
+<img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=for-the-badge&logo=amazon-ec2&logoColor=white" height="22" alt="AWS EC2">
+<img src="https://img.shields.io/badge/AWS_S3-569A31?style=for-the-badge&logo=amazon-s3&logoColor=white" height="22" alt="AWS S3">
+<img src="https://img.shields.io/badge/AWS_RDS-527FFF?style=for-the-badge&logo=amazon-rds&logoColor=white" height="22" alt="AWS RDS">
+<img src="https://img.shields.io/badge/AWS_IAM_&_VPC-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" height="22" alt="AWS IAM/VPC">
+<img src="./assets/badges/devtools/docker.svg" alt="Docker" height="20">
+<img src="./assets/badges/devtools/github-actions.svg" alt="GitHub Actions" height="20">
+<img src="./assets/badges/devtools/ci-cd.svg" alt="CI/CD" height="20">
+<img src="./assets/badges/devtools/nginx.svg" alt="Nginx" height="20">
+<img src="./assets/badges/systems/virtualization.svg" alt="Virtualization" height="20">
+</p>
+
+<h3>Web &amp; Backend Frameworks</h3>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" height="22" alt="Spring Boot">
+<img src="./assets/badges/web/react.svg" alt="React" height="20">
+<img src="./assets/badges/web/node-js.svg" alt="Node.js" height="20">
+<img src="./assets/badges/web/express.svg" alt="Express" height="20">
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" height="22" alt="Vite">
+<img src="./assets/badges/web/tailwind-css.svg" alt="Tailwind CSS" height="20">
+<img src="./assets/badges/web/bootstrap.svg" alt="Bootstrap" height="20">
+<img src="./assets/badges/web/html.svg" alt="HTML5" height="20">
+<img src="./assets/badges/web/css.svg" alt="CSS3" height="20">
+<img src="./assets/badges/web/rest-apis.svg" alt="REST APIs" height="20">
+<img src="./assets/badges/web/responsive-design.svg" alt="Responsive Design" height="20">
+</p>
+
+<h3>Operating Systems, Systems &amp; Networking</h3>
+
+<p align="center">
+<img src="./assets/badges/systems/linux.svg" alt="Linux" height="20">
+<img src="./assets/badges/systems/ubuntu.svg" alt="Ubuntu" height="20">
+<img src="./assets/badges/systems/windows.svg" alt="Windows" height="20">
+<img src="./assets/badges/networking/tcp-ip.svg" alt="TCP/IP" height="20">
+<img src="./assets/badges/networking/dns.svg" alt="DNS" height="20">
+<img src="./assets/badges/networking/routing-and-switching.svg" alt="Routing & Switching" height="20">
+<img src="./assets/badges/networking/subnetting.svg" alt="Subnetting" height="20">
+<img src="./assets/badges/networking/firewalls.svg" alt="Firewalls" height="20">
+<img src="./assets/badges/networking/http-and-https.svg" alt="HTTP/HTTPS" height="20">
+</p>
+
+<h3>Databases &amp; Caching</h3>
+
+<p align="center">
+<img src="./assets/badges/databases/mysql.svg" alt="MySQL" height="20">
+<img src="./assets/badges/databases/postgresql.svg" alt="PostgreSQL" height="20">
+<img src="./assets/badges/databases/mongodb.svg" alt="MongoDB" height="20">
+<img src="./assets/badges/databases/redis.svg" alt="Redis" height="20">
+<img src="./assets/badges/databases/sqlite.svg" alt="SQLite" height="20">
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" height="22" alt="Firebase">
+</p>
+
+<h3>Artificial Intelligence &amp; Computer Vision</h3>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Generative_AI-8E75C4?style=for-the-badge&logoColor=white" height="22" alt="Generative AI">
+<img src="https://img.shields.io/badge/Google_Gemini_API-4285F4?style=for-the-badge&logo=google&logoColor=white" height="22" alt="Google Gemini API">
+<img src="https://img.shields.io/badge/Prompt_Engineering-FF6F00?style=for-the-badge&logoColor=white" height="22" alt="Prompt Engineering">
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" height="22" alt="OpenCV">
+<img src="https://img.shields.io/badge/Tesseract_OCR-5C3EE8?style=for-the-badge&logoColor=white" height="22" alt="Tesseract OCR">
+</p>
+
+<h3>Hardware, IoT &amp; Embedded Systems</h3>
+
+<p align="center">
+<img src="https://img.shields.io/badge/ESP32_/_NodeMCU-E7352C?style=for-the-badge&logo=espressif&logoColor=white" height="22" alt="ESP32">
+<img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" height="22" alt="Arduino">
+<img src="https://img.shields.io/badge/Proteus_CAD_Simulation-005B94?style=for-the-badge&logoColor=white" height="22" alt="Proteus">
+<img src="https://img.shields.io/badge/Sensor_Telemetry_&_Circuits-4A154B?style=for-the-badge&logoColor=white" height="22" alt="Sensor Telemetry">
+</p>
+
+<h3>Developer Tools &amp; Environment</h3>
+
+<p align="center">
+<img src="./assets/badges/devtools/git.svg" alt="Git" height="20">
+<img src="./assets/badges/devtools/github.svg" alt="GitHub" height="20">
+<img src="./assets/badges/devtools/vs-code.svg" alt="VS Code" height="20">
+<img src="./assets/badges/devtools/postman.svg" alt="Postman" height="20">
+<img src="./assets/badges/devtools/jira.svg" alt="Jira" height="20">
+</p>
+
+</div>
+
+---
+
+<div align="center">
+  <img src="./assets/uiux-wireframe.svg" alt="UI/UX System Architecture &amp; Wireframe Blueprint" width="100%">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/code-window.svg" alt="Cloud Architecture Code Terminal" width="100%">
+</div>
+
+<br>
+
+<h2 align="center">🚀 Featured Engineering Projects Showcase</h2>
 
 <table width="100%">
   <tr>
-    <td width="33%" align="center">
-      🤖<br/><strong>AI Agents & RAG</strong><br/>
-      Building multi-agent LLM systems with retrieval augmented generation.
+    <td width="50%" valign="top">
+      <h3 align="left">📄 <a href="https://github.com/Pavangitu/career-with-resume.git">CareerWith – AI Resume Builder</a></h3>
+      <p><b>Stack:</b> React 19 · TypeScript · Tailwind CSS · Google Gemini AI · Vite</p>
+      <p>An intelligent, production-grade resume architect featuring 15 custom glassmorphic layout templates. Incorporates dynamic real-time ATS scoring, LLM-powered feedback critique with Gemini AI, live typography rendering, and crisp single-page A4 PDF generation.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/career-with-resume.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
     </td>
-    <td width="33%" align="center">
-      📦<br/><strong>Cloud-Native Kubernetes</strong><br/>
-      Orchestrating container workloads with K8s and Service Meshes.
+    <td width="50%" valign="top">
+      <h3 align="left">☁️ <a href="https://github.com/Pavangitu/calc.git">AWS Dockerized Node.js Application</a></h3>
+      <p><b>Stack:</b> AWS EC2 · Docker · Node.js · Express · GitHub Actions CI/CD</p>
+      <p>High-availability containerized microservice architected and deployed on AWS EC2 with continuous automated integration. Utilizes secured VPC subnets, IAM role policies, and streamlined container lifecycle management to slash deployment overhead by 80%.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/calc.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
     </td>
-    <td width="34%" align="center">
-      🛡️<br/><strong>Security Engineering</strong><br/>
-      Configuring secure VPC infrastructures and Identity/Access management.
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="left">💼 <a href="https://github.com/Pavangitu/pavan-datta-_-portfolio.git">Interactive Developer Portfolio Suite</a></h3>
+      <p><b>Stack:</b> React 19 · TypeScript · Vite · Tailwind CSS · Express · EmailJS</p>
+      <p>Modern developer portfolio web platform engineered with sleek responsive layout, interactive project showcases, live modal previews, direct contact integration via EmailJS, and full Express backend API support.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/pavan-datta-_-portfolio.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="left">🏢 <a href="https://github.com/aws7556-cloud/Workfella-test.git">Workafella Coworking Booking Platform</a></h3>
+      <p><b>Stack:</b> React · TypeScript · Spring Boot (Java) · MySQL · AWS Cloud</p>
+      <p>Comprehensive enterprise desk and workspace reservation platform. Built with normalized relational database models, dynamic real-time floor availability indicators, transactional booking locks, and zero booking collisions.</p>
+      <p>
+        <a href="https://github.com/aws7556-cloud/Workfella-test.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="left">🎮 <a href="https://github.com/Pavangitu/Desktop-pet.git">Gear 5 Luffy – Desktop Pet Companion</a></h3>
+      <p><b>Stack:</b> Python · PySide6 · PyWin32 · OS Window Physics</p>
+      <p>An interactive animated desktop companion engineered with custom transparent window rendering, 60 FPS animation loops, physics collision detection against active OS application windows, and interactive event triggers.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/Desktop-pet.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="left">🌡️ <a href="https://github.com/Pavangitu/Environment_Monitoring_System.git">Environment Monitoring System</a></h3>
+      <p><b>Stack:</b> ESP32 · NodeMCU · C++ · MQ Sensors · Proteus VSM</p>
+      <p>Real-time telemetric environment monitoring system engineered for industrial safety. Senses ambient temperature, humidity, toxic gases, and infrared flame hazards with sub-second threshold alarms and remote web telemetry.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/Environment_Monitoring_System.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="left">🔥 <a href="https://github.com/Pavangitu/Flame-Sensor-Library-For-Proteus.git">Proteus Flame Sensor CAD Library</a></h3>
+      <p><b>Stack:</b> C++ · Proteus CAD · Schematic Modeling · Circuit Simulation</p>
+      <p>Published open-source simulation component for Proteus Design Suite mimicking real-world 3-pin and 4-pin infrared flame detector modules. Enables engineers to safely simulate optical fire detection without physical hardware.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/Flame-Sensor-Library-For-Proteus.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="left">🧮 <a href="https://github.com/Pavangitu/scientificcalculator.git">Creative Hybrid Calculator Suite</a></h3>
+      <p><b>Stack:</b> React · TypeScript · Java Swing · Financial Engines</p>
+      <p>Versatile computation suite supporting Standard, Scientific, Programmer (Binary/Octal/Hexadecimal bitwise operations), and Financial loan amortization modes with instant Microsoft Excel / CSV statement export.</p>
+      <p>
+        <a href="https://github.com/Pavangitu/scientificcalculator.git">
+          <img src="https://img.shields.io/badge/GitHub-Repository-E8203A?style=flat-square&logo=github" alt="Repository">
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="left">⏰ Alarm Clock Web Application</h3>
+      <p><b>Stack:</b> JavaScript · HTML5 · CSS3 · JSON · LocalStorage API</p>
+      <p>A sleek, lightweight web utility designed for time management. Features multi-alarm configurations, custom audio tones, snooze intervals, and persistent state management using browser LocalStorage and structured JSON schemas.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square" alt="Status">
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="left">📑 OCR Automated Document Conversion System</h3>
+      <p><b>Stack:</b> Python · Tesseract OCR · OpenCV · Flask · PyMuPDF</p>
+      <p>Automated optical character recognition pipeline converting scanned multi-lingual documents, receipts, and invoices into structured, searchable text formats with intelligent tabular detection, slashing manual data entry by 70%.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square" alt="Status">
+      </p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 📈 GitHub Metrics & Analytics
+<h2 align="center">📜 Industry Certifications &amp; Accreditations</h2>
 
 <div align="center">
-  <table border="0">
-    <tr>
-      <td width="50%"><img src="https://github-readme-stats.vercel.app/api?username=pavangitu&show_icons=true&theme=tokyonight&border_radius=10" alt="GitHub Stats" /></td>
-      <td width="50%"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pavangitu&layout=compact&theme=tokyonight&border_radius=10" alt="Top Languages" /></td>
-    </tr>
-    <tr>
-      <td width="50%"><img src="https://github-readme-streak-stats.herokuapp.com/?user=pavangitu&theme=tokyonight&border_radius=10" alt="GitHub Streak" /></td>
-      <td width="50%"><img src="https://github-readme-activity-graph.vercel.app/graph?username=pavangitu&theme=tokyo-night&bg_color=1a1b26&color=7aa2f7&line=7aa2f7&point=e0af68&area=true&hide_border=true" alt="Activity Graph" /></td>
-    </tr>
-  </table>
+
+| Certificate Title | Issuing Organization | Domain | Status |
+| :--- | :--- | :--- | :--- |
+| **AWS Cloud Practitioner Essentials** | Amazon Web Services (AWS) | Cloud Architecture &amp; Foundations | 🟡 *In Progress* |
+| **Responsible AI Basics** | Google | Generative AI &amp; Ethics | 🟢 *Certified* |
+| **Introduction to Generative AI Studio** | Google | GenAI &amp; Model Orchestration | 🟢 *Certified* |
+| **Machine Learning Basics** | Amazon Web Services (AWS) | Cloud Machine Learning | 🟢 *Certified* |
+| **Master Data Management for Beginners** | Tata Consultancy Services (TCS) | Data Governance &amp; Architecture | 🟢 *Certified* |
+| **Prompt Engineering Specialization** | SkillUP / Simplilearn | LLM Tuning &amp; Prompt Engineering | 🟢 *Certified* |
+| **Technology Risk Job Simulation** | Ernst &amp; Young (EY) | Cybersecurity &amp; Risk Audit | 🟢 *Certified* |
+| **Introduction to Cybersecurity Simulation** | Commonwealth Bank | Security Architecture &amp; Defense | 🟢 *Certified* |
+| **AI &amp; Machine Learning Foundations** | IBM | Artificial Intelligence &amp; Neural Nets | 🟢 *Certified* |
+| **AI &amp; Content Strategy Specialization** | Semrush | AI Content Modeling | 🟢 *Certified* |
+| **Introduction to Cybersecurity** | Cisco | Network &amp; Systems Security | 🟢 *Certified* |
+| **Problem Solving (Basic &amp; Intermediate)** | HackerRank | Algorithms &amp; Data Structures | 🟢 *Certified* |
+| **SQL (Basic &amp; Intermediate)** | HackerRank | Database Query Optimization | 🟢 *Certified* |
+| **Learn AutoCAD 2D &amp; 3D: Zero to Hero** | Autodesk | 2D/3D Schematic CAD Design | 🟢 *Certified* |
+| **Mastering Network Security: Defending Against Cyber Threats** | Network Credentials Core | Threat Hunting &amp; Firewalls | 🟢 *Certified* |
+| **AI for Students - Build Your Own Generative AI Model** | AI Academic Core | Machine Learning Architecture | 🟢 *Certified* |
+| **Responsive Web Design Certification** | freeCodeCamp | Modern Frontend Standards | 🟢 *Certified* |
+
+</div>
+
+---
+
+<h2 align="center" id="github-stats"><img src="./assets/h-stats.svg" alt="GitHub Stats" width="100%"></h2>
+
+<div align="center">
+
+<img src="./assets/stats-card.svg" alt="Pavan Datta Gedila GitHub stats" width="49%">
+<img src="https://streak-stats.demolab.com/?user=Pavangitu&background=050505&border=E8203A&stroke=E8203A&ring=F8E028&fire=E8203A&currStreakNum=F8F0E0&sideNums=F8F0E0&currStreakLabel=F8E028&sideLabels=F8F0E0&dates=8C8780&hide_border=false" alt="Pavan Datta Gedila GitHub streak" width="49%">
+
+<br><br>
+
+<h3>Monthly Contribution Wave</h3>
+
+<img src="./assets/monthly-activity-wave.svg" alt="30-day activity wave" width="100%">
+
+</div>
+
+---
+
+<h2 align="center" id="top-languages"><img src="./assets/h-langs.svg" alt="Top Languages" width="100%"></h2>
+
+<div align="center">
+
+<img src="./assets/languages-card.svg" alt="Pavan Datta Gedila Top languages" width="55%">
+
 </div>
 
 ---
 
 <div align="center">
-  <h3>🏆 Trophies</h3>
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=pavangitu&theme=tokyonight&no-bg=true&no-frame=true&margin-w=10" alt="Trophies" />
+
+<a href="https://github.com/Pavangitu">
+  <img src="https://komarev.com/ghpvc/?username=Pavangitu&label=VISITORS&color=F8E028&style=for-the-badge" alt="Visitors">
+</a>
+
+<br><br>
+
+<h3>Pacman Contribution Animation</h3>
+
+<img src="./assets/pacman-contribution-graph-dark.svg" alt="Pacman Contribution Animation" width="100%">
+
+</div>
+
+<br><br>
+
+<h2 align="center" id="lets-connect"><img src="./assets/h-connect.svg" alt="Let's Connect" width="100%"></h2>
+
+<div align="center">
+  <img src="./assets/qr-scanner.svg" alt="Direct QR Connection HUD" width="100%">
+</div>
+
+<br>
+
+<p align="center"><b>Ready to build resilient cloud architectures, scalable software, and intelligent AI systems together? Let's connect!</b></p>
+
+<p align="center">
+  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369"><img src="./assets/connect/linkedin.svg" alt="LinkedIn"></a>
+  <a href="mailto:pavandattagedila@gmail.com"><img src="./assets/connect/email.svg" alt="Email"></a>
+  <a href="https://github.com/Pavangitu"><img src="./assets/connect/github.svg" alt="GitHub"></a>
+  <a href="https://x.com/DattaGedila"><img src="./assets/connect/x.svg" alt="X (Twitter)"></a>
+  <a href="https://www.instagram.com/she__call_me_single"><img src="./assets/connect/instagram.svg" alt="Instagram"></a>
+  <a href="https://wa.me/918249397556"><img src="./assets/connect/whatsapp.svg" alt="WhatsApp"></a>
+</p>
+
+<br>
+
+<div align="center">
+  <a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20Pavan-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Connect">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://wa.me/918249397556">
+    <img src="https://img.shields.io/badge/WhatsApp-Chat%20Directly-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Chat">
+  </a>
+  &nbsp;&nbsp;
+  <a href="mailto:pavandattagedila@gmail.com">
+    <img src="https://img.shields.io/badge/Email-pavandattagedila%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Direct Email">
   </a>
 </div>
 
----
-
-## 🤝 Let's Connect
-
-<div align="center">
-  <table border="0" cellpadding="8" cellspacing="0" style="border-collapse: collapse; max-width: 600px; width: 100%;">
-    <tr style="border-bottom: 1px solid #30363d;">
-      <td align="left"><strong>📬 Email</strong></td>
-      <td align="left"><a href="mailto:pavandattagedila@gmail.com">pavandattagedila@gmail.com</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #30363d;">
-      <td align="left"><strong>💼 LinkedIn</strong></td>
-      <td align="left"><a href="https://linkedin.com/in/pavan-datta-gedila-7a1089369" target="_blank">Pavan Datta Gedila</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #30363d;">
-      <td align="left"><strong>💻 GitHub</strong></td>
-      <td align="left"><a href="https://github.com/Pavangitu" target="_blank">pavangitu</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #30363d;">
-      <td align="left"><strong>📸 Instagram</strong></td>
-      <td align="left"><a href="https://www.instagram.com/she__call_me_single?igsh=mwl4mddpbwnqmxzlyg==" target="_blank">she__call_me_single</a></td>
-    </tr>
-    <tr style="border-bottom: 1px solid #30363d;">
-      <td align="left"><strong>🏆 Topcoder</strong></td>
-      <td align="left"><a href="https://www.topcoder.com/members/761211" target="_blank">761211</a></td>
-    </tr>
-    <tr>
-      <td align="left"><strong>🐦 Twitter / X</strong></td>
-      <td align="left"><a href="https://twitter.com/" target="_blank">Profile</a></td>
-    </tr>
-  </table>
-</div>
+<br>
 
 <p align="center">
-  <em>"Simplicity is the soul of efficiency; automation is the execution of it."</em>
+  📞 <b>Direct Phone:</b> <code>+91 8249397556</code> &nbsp;|&nbsp; 
+  📍 <b>Base:</b> <code>Bengaluru / Odisha, India</code> &nbsp;|&nbsp; 
+  ⚡ <b>Available for:</b> Cloud Engineering, Full-Stack Development &amp; AI Solutions
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="Snake animation" />
-</p>
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:E8203A,100:050505&height=100&section=footer" alt="" width="100%">

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 130" width="100%" height="100%" role="img" aria-label="System HUD Telemetry &amp; Architecture">
+  <title>System HUD Telemetry &amp; Architecture</title>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="hudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080a"/>
+      <stop offset="50%" stop-color="#040405"/>
+      <stop offset="100%" stop-color="#090608"/>
+    </linearGradient>
+
+    <!-- Dot Grid Pattern -->
+    <pattern id="dotGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="0.8" fill="#B8893F" opacity="0.25"/>
+    </pattern>
+
+    <!-- Waveform Gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8203A" stop-opacity="0.2"/>
+      <stop offset="35%" stop-color="#E8203A"/>
+      <stop offset="70%" stop-color="#F8E028"/>
+      <stop offset="100%" stop-color="#B8893F" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base with Chamfered Tech Corners -->
+  <path d="M12 0.75 H888 L899.25 12 V118 L888 129.25 H12 L0.75 118 V12 Z" fill="url(#hudBg)" stroke="#B8893F" stroke-width="1.2" opacity="0.95"/>
+  <rect x="12" y="12" width="876" height="106" fill="url(#dotGrid)"/>
+
+  <!-- Corner Reticle Brackets -->
+  <g stroke="#E8203A" stroke-width="1.5" fill="none">
+    <path d="M4 18 V6 H18"/>
+    <path d="M896 18 V6 H882"/>
+    <path d="M4 112 V124 H18"/>
+    <path d="M896 112 V124 H882"/>
+  </g>
+
+  <!-- Top Telemetry Ribbon -->
+  <rect x="25" y="14" width="850" height="22" fill="#0c0c10" stroke="#B8893F" stroke-width="0.75" opacity="0.8"/>
+  <circle cx="38" cy="25" r="3.5" fill="#25D366">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="50" y="29" fill="#25D366" font-family="'Courier New', monospace" font-size="10.5" font-weight="700" letter-spacing="1">SYS_STATUS: ONLINE</text>
+  <text x="210" y="29" fill="#F8E028" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.2">// NODE: AWS_AP_SOUTH_1</text>
+  <text x="420" y="29" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="10" letter-spacing="1.2">// ARCH: REACT19 · SPRING_BOOT · DOCKER</text>
+  <text x="755" y="29" fill="#E8203A" font-family="'Courier New', monospace" font-size="10" font-weight="700" letter-spacing="1.2">UPTIME: 99.98%</text>
+
+  <!-- Left: Vector Barcode Telemetry & Binary -->
+  <g transform="translate(30, 48)">
+    <g fill="#F8F0E0" opacity="0.75">
+      <rect x="0" y="0" width="2" height="38"/>
+      <rect x="4" y="0" width="3" height="38"/>
+      <rect x="9" y="0" width="1.5" height="38"/>
+      <rect x="13" y="0" width="4" height="38"/>
+      <rect x="19" y="0" width="2" height="38"/>
+      <rect x="23" y="0" width="5" height="38"/>
+      <rect x="30" y="0" width="1" height="38"/>
+      <rect x="33" y="0" width="3" height="38"/>
+      <rect x="38" y="0" width="2" height="38"/>
+      <rect x="42" y="0" width="4" height="38"/>
+      <rect x="48" y="0" width="2" height="38"/>
+      <rect x="52" y="0" width="1" height="38"/>
+      <rect x="55" y="0" width="3" height="38"/>
+      <rect x="60" y="0" width="4" height="38"/>
+      <rect x="66" y="0" width="1.5" height="38"/>
+      <rect x="70" y="0" width="2" height="38"/>
+      <rect x="74" y="0" width="3" height="38"/>
+      <rect x="80" y="0" width="2" height="38"/>
+      <rect x="84" y="0" width="4" height="38"/>
+      <rect x="90" y="0" width="1" height="38"/>
+      <rect x="93" y="0" width="2" height="38"/>
+    </g>
+    <text x="0" y="52" fill="#B8893F" font-family="'Courier New', monospace" font-size="9" letter-spacing="2">0x70 0x61 0x76 0x61 0x6E</text>
+    <text x="0" y="66" fill="#888" font-family="'Courier New', monospace" font-size="8.5" letter-spacing="1">ID: PDG-8249-CLOUD-2026</text>
+  </g>
+
+  <!-- Center: Design Grid Calipers & Oscilloscope Waveform -->
+  <g transform="translate(180, 48)">
+    <!-- Blueprint Coordinate Calipers -->
+    <line x1="0" y1="0" x2="490" y2="0" stroke="#B8893F" stroke-width="0.8" opacity="0.4"/>
+    <line x1="0" y1="58" x2="490" y2="58" stroke="#B8893F" stroke-width="0.8" opacity="0.4"/>
+    <!-- Measurement Ticks -->
+    <path d="M0 0 v-4 M50 0 v-3 M100 0 v-4 M150 0 v-3 M200 0 v-4 M250 0 v-3 M300 0 v-4 M350 0 v-3 M400 0 v-4 M450 0 v-3 M490 0 v-4" stroke="#B8893F" stroke-width="0.8" opacity="0.5"/>
+    <text x="0" y="-8" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">00.00</text>
+    <text x="235" y="-8" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">LATENCY: 12ms</text>
+    <text x="445" y="-8" fill="#B8893F" font-family="'Courier New', monospace" font-size="8">SYNC: OK</text>
+
+    <!-- Center Crosshairs -->
+    <path d="M 120 28 m -6 0 h 12 m -6 -6 v 12" stroke="#E8203A" stroke-width="1.2"/>
+    <path d="M 370 28 m -6 0 h 12 m -6 -6 v 12" stroke="#E8203A" stroke-width="1.2"/>
+
+    <!-- Dynamic Signal Waveform Curve -->
+    <path d="M 0 35 Q 30 10 60 35 T 120 35 T 160 5 T 200 48 T 240 22 T 280 40 T 320 12 T 360 45 T 410 25 T 450 35 T 490 32" fill="none" stroke="url(#waveGrad)" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Shadow Glow Line -->
+    <path d="M 0 35 Q 30 10 60 35 T 120 35 T 160 5 T 200 48 T 240 22 T 280 40 T 320 12 T 360 45 T 410 25 T 450 35 T 490 32" fill="none" stroke="#E8203A" stroke-width="0.8" opacity="0.5"/>
+
+    <text x="5" y="70" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="8.5" letter-spacing="1">PACKET_FLOW: 1.4 GB/s</text>
+    <text x="180" y="70" fill="#F8E028" font-family="'Courier New', monospace" font-size="8.5" letter-spacing="1">CONTAINERS: 12 ACTIVE</text>
+    <text x="360" y="70" fill="#25D366" font-family="'Courier New', monospace" font-size="8.5" letter-spacing="1">SERVICES: REST / GRPC</text>
+  </g>
+
+  <!-- Right: Radar Target Scanner & Microchip Node -->
+  <g transform="translate(735, 46)">
+    <!-- Radar Circle -->
+    <circle cx="38" cy="35" r="32" fill="#040406" stroke="#B8893F" stroke-width="1.2"/>
+    <circle cx="38" cy="35" r="20" fill="none" stroke="#B8893F" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <circle cx="38" cy="35" r="8" fill="none" stroke="#E8203A" stroke-width="1"/>
+    <!-- Crosshairs -->
+    <line x1="6" y1="35" x2="70" y2="35" stroke="#B8893F" stroke-width="0.75" opacity="0.6"/>
+    <line x1="38" y1="3" x2="38" y2="67" stroke="#B8893F" stroke-width="0.75" opacity="0.6"/>
+    <!-- Sweeper Line -->
+    <line x1="38" y1="35" x2="60" y2="12" stroke="#F8E028" stroke-width="1.8">
+      <animateTransform attributeName="transform" type="rotate" from="0 38 35" to="360 38 35" dur="4s" repeatCount="indefinite"/>
+    </line>
+    <!-- Target blips -->
+    <circle cx="50" cy="22" r="2" fill="#E8203A"/>
+    <circle cx="28" cy="45" r="1.5" fill="#25D366"/>
+
+    <!-- Metrics labels -->
+    <text x="82" y="24" fill="#F8F0E0" font-family="'Courier New', monospace" font-size="9" font-weight="700">RADAR_AI</text>
+    <text x="82" y="38" fill="#B8893F" font-family="'Courier New', monospace" font-size="8.5">GEO: IN-BLR</text>
+    <text x="82" y="52" fill="#E8203A" font-family="'Courier New', monospace" font-size="8.5">LAT: 12.97°N</text>
+    <text x="82" y="66" fill="#F8E028" font-family="'Courier New', monospace" font-size="8.5">LON: 77.59°E</text>
+  </g>
+</svg>

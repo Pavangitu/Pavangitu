@@ -1,0 +1,48 @@
+name: Generate pacman contribution graph
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        run: |
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git fetch --depth=1 origin ${{ github.ref_name || 'main' }}
+          git checkout -f FETCH_HEAD
+
+      - name: Generate pacman contribution graphs
+        run: |
+          mkdir -p dist assets
+          npx --yes pacman-contribution-graph --platform github --username Pavangitu --game pacman --gameTheme github-dark --output dist/pacman-contribution-graph-dark.svg
+          npx --yes pacman-contribution-graph --platform github --username Pavangitu --game pacman --gameTheme github --output dist/pacman-contribution-graph.svg
+
+      - name: Update assets in main branch
+        run: |
+          cp dist/pacman-contribution-graph-dark.svg assets/pacman-contribution-graph-dark.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/pacman-contribution-graph-dark.svg
+          git diff --cached --quiet || git commit -m "chore: refresh pacman contribution graph"
+          git push origin HEAD:${{ github.ref_name || 'main' }} || true
+
+      - name: Publish pacman graph to output branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B output
+          git add -f dist
+          git commit -m "chore: update pacman contribution graph" || exit 0
+          git push -f origin output
